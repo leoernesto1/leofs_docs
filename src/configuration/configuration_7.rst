@@ -168,4 +168,4 @@ See Also
 
 .. |leo_storage_conf| raw:: html
 
-   <a href="https://github.com/leo-project/leo_storage/blob/master/priv/leo_storage.conf" tarrget="_blank">leo_storage.conf</a>
+   <a href="https://github.com/leo-project/leo_storage/blob/master/priv/leo_storage.conf" target="_blank">leo_storage.conf</a>

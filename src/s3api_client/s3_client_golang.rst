@@ -6,13 +6,16 @@
 
 .. _aws-sdk-golang-label:
 
-Getting Started with Golang
----------------------------
+Getting Started with |golang|
+-----------------------------
 
-`crowdmob/goamz <https://github.com/crowdmob/goamz>`_ is one of golang packages to interact with the `Amazon Web Service <http://aws.amazon.com/>`_ . 
+|goamz|
+^^^^^^^
 
-Install goamz
-^^^^^^^^^^^^^
+|goamz| is one of |golang| packages to interact with the `Amazon Web Service <http://aws.amazon.com/>`_ .
+
+Install |goamz|
+^^^^^^^^^^^^^^^^
 
 ::
 
@@ -26,9 +29,9 @@ Example usage
 PUT an object into LeoFS
 """"""""""""""""""""""""
 
-This example tries to connect LeoFS and put an object. 
+This example tries to connect LeoFS and put an object.
 
-.. code-block:: golang
+.. code-block:: go
 
    package main
 
@@ -62,11 +65,11 @@ This example tries to connect LeoFS and put an object.
 .. note:: LeoFS' domains are ruled by :ref:`this rule <s3-path-label>`. You need to configure the *Endpoint*, *Port*, *AccessKeyId* and *SecretAccessKey*
 
 GET an object from LeoFS
-"""""""""""""""""""
+""""""""""""""""""""""""
 
-This example tries to connect LeoFS and get an object. 
+This example tries to connect LeoFS and get an object.
 
-.. code-block:: golang
+.. code-block:: go
 
    package main
 
@@ -105,9 +108,9 @@ This example tries to connect LeoFS and get an object.
 DELETE an object from LeoFS
 """""""""""""""""""""""""""
 
-This example tries to connect LeoFS and delete an object. 
+This example tries to connect LeoFS and delete an object.
 
-.. code-block:: golang
+.. code-block:: go
 
    package main
 
@@ -131,7 +134,7 @@ This example tries to connect LeoFS and delete an object.
 
        client := s3.New(auth, region)
        bucket := client.Bucket("YOUR_BUCKET_NAME")
-       
+
        err := bucket.Del("YOUR_PATH")
        if err != nil {
            panic(err)
@@ -139,3 +142,11 @@ This example tries to connect LeoFS and delete an object.
    }
 
 
+.. |golang| raw:: html
+
+   <a href="https://golang.org" target="_blank">Go</a>
+
+
+.. |goamz| raw:: html
+
+   <a href="https://github.com/crowdmob/goamz" target="_blank">GoAMZ</a>
