@@ -6,8 +6,8 @@
 
 .. _aws-sdk-golang-label:
 
-Getting Started with |golang|
------------------------------
+Getting Started with Go
+-----------------------
 
 |goamz|
 ^^^^^^^
