@@ -11,14 +11,14 @@ System Maintenance
 ==================
 
 .. index::
-    pair: System maintenance; Upgrade old version to 1.1.5
+    pair: System maintenance; Upgrade old version to 1.2.4
 
 \
 
-Upgrade your old version LeoFS to v1.1.5
+Upgrade your old version LeoFS to v1.2.4
 ----------------------------------------
 
-This section describes the way of replacement of old LeoFS to v1.1.5
+This section describes the way of replacement of old LeoFS to v1.2.4
 
 Upgrade flow diagram
 ^^^^^^^^^^^^^^^^^^^^
@@ -32,7 +32,7 @@ Upgrade flow diagram
 
 \
 
-.. note:: If you're using LeoFS v1.0.0-pre1, v0.16 or v0.14, you need to take over the configuration of ``metadata-storage`` as follows because the default configuration is ``leveldb`` from v1.0.0-pre2. We're planning to provide the ``db-converter`` tool - from ``bitcask`` to ``leveldb`` with v1.2.0.
+.. note:: If you're using LeoFS v1.0.0-pre1, v0.16 or v0.14, you need to take over the configuration of ``metadata-storage`` as follows because the default configuration is ``leveldb`` from v1.0.0-pre2. We provide the ``db-converter`` tool - from ``bitcask`` to ``leveldb`` which is |leofs_utils/tools/b2l|.
 
 Takeover a part of confugurations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -380,4 +380,81 @@ Diagnosis Log Files
 +--------------------------------------------------+-----------------------------+
 | leo_object_storage_<avs-num>.report.<timestamp>  | Report of a data diagnosis  |
 +--------------------------------------------------+-----------------------------+
+
+
+.. _recover_node_operation:
+
+.. index::
+    pair: System maintenance; Recover a storage-node
+
+Recover a storage-node
+----------------------
+
+Since
+^^^^^
+
+LeoFS v1.0.0
+
+Overview
+^^^^^^^^
+
+Since disk(s) of a node collapsed, you're able to recover the disk(s) with LeoFS recover-command.
+
+
+Workflow
+^^^^^^^^
+
+Suspend and Stop the storage-node
+"""""""""""""""""""""""""""""""""
+
+* Suspend a target node with |the suspend-command| with ``leofs-adm command``
+* Stop the node with ``$ path/to/leo_storage/bin/leo_storage stop``
+* Confirm the cluster status with |the status-command| with leofs-adm command. You need to check the node whether state of  which is ``suspend`` or not.
+* **Change the disk(s) (rebuild the array when using RAID)  and the configuration of the target node**
+
+Restart the node and Execute recover-node-command
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+* Restart the node with ``$ path/to/leo_storage/bin/leo_storage start``
+* Resume a target node with |the resume-command| with leofs-adm command
+* Execute |the recover-node-command| with leofs-adm command
+    * Like this: ``$ leofs-adm recover-node <target-node>``
+* Also, you're able to check the progress of the recover with |the mq-stats-command| with leofs-adm command
+    * Like this (exclude the target node):
+        * ``$ leofs-adm mq-stats <storage-node-1>``
+        * ...
+        * ``$ leofs-adm mq-stats <storage-node-N>``
+
+See also
+^^^^^^^^
+
+* |the suspend-command|
+* |the status-command|
+* |the resume-command|
+* |the recover-node-command|
+* |the mq-stats-command|
+
+.. |leofs_utils/tools/b2l| raw:: html
+
+   <a href="https://github.com/leo-project/leofs_utils/tree/develop/tools/b2l" target="_blank">leofs_utils/tools/b2l</a>
+
+.. |the suspend-command| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_3.html#suspend-command" target="_blank">the suspend-command</a>
+
+.. |the status-command| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_2.html#status-command" target="_blank">the status-command</a>
+
+.. |the resume-command| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_3.html#resume-command" target="_blank">the resume-command</a>
+
+.. |the recover-node-command| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_4.html#recover-node-command" target="_blank">the recover-node-command</a>
+
+.. |the mq-stats-command| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_3.html#mq-stats-command" target="_blank">the mq-stats-command</a>
 
