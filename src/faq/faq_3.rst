@@ -126,6 +126,32 @@ In conclusiton:
     * # of containers = 32 OR 64 *(depends on the disk capacity and performance)*
 
 
+leo_storage can not start due to "enif_send_failed on non smp vm"
+---------------------------------------------------------------------
+
+When starting leo_storage on a single core machine which crashes with an erl_nif error.
+
+.. code-block:: bash
+
+    enif_send: env==NULL on non-SMP VM
+    Aborted (core dumped)
+
+
+In this case, you have faced with |issue_120|.
+You need to set a Erlang's VM flag - ``-smp`` in your leo_storage configuration - *leo_storage.conf* as follows:
+
+.. code-block:: bash
+
+    ## leo_storage.conf
+    erlang.smp = enable
+
+
+See also:
+* |erl_nif|
+* |leo_storage configuration|
+* |leo_storage.conf|
+
+
 .. |leofs-adm| raw:: html
 
    <a href="https://github.com/leo-project/leofs/blob/master/leofs-adm" target="_blank">leofs-adm</a>
@@ -153,3 +179,19 @@ In conclusiton:
 .. |b2l| raw:: html
 
    <a href="https://github.com/leo-project/leofs_utils/tree/develop/tools/b2l" target="_blank">Tool:Converting metadata from bitcask to leveldb</a>
+
+.. |erl_nif| raw:: html
+
+   <a href="http://www.erlang.org/doc/man/erl_nif.html#enif_send" target="_blank">Erlang - erl_nif</a>
+
+.. |leo_storage configuration| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/configuration/configuration_2.html" >LeoFS documentation - leo_storage configuration</a>
+
+.. |leo_storage.conf| raw:: html
+
+   <a href="https://github.com/leo-project/leo_storage/blob/develop/priv/leo_storage.conf" target="_blank">leo_storage - leo_storage.conf</a>
+
+.. |issue_120| raw:: html
+
+   <a href="https://github.com/basho/eleveldb/issues/120" target="_blank">eleveldb's issue#120</a>
