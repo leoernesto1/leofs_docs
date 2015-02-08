@@ -133,6 +133,7 @@ When starting leo_storage on a single core machine which crashes with an erl_nif
 
 .. code-block:: bash
 
+    ## Error log
     enif_send: env==NULL on non-SMP VM
     Aborted (core dumped)
 
@@ -147,9 +148,9 @@ You need to set a Erlang's VM flag - ``-smp`` in your leo_storage configuration 
 
 
 See also:
-* |erl_nif|
-* |leo_storage configuration|
-* |leo_storage.conf|
+    * |erl_nif|
+    * |leo_storage configuration|
+    * |leo_storage.conf|
 
 
 .. |leofs-adm| raw:: html
