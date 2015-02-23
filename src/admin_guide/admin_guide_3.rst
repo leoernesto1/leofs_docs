@@ -192,7 +192,7 @@ Explanation of columns:
     leo_async_deletion_queue        |   idling    | 0              | 1000           | 100            | async deletion of objs
     leo_rebalance_queue             |   running   | 2167           | 1400           | 10             | rebalance objs
     leo_sync_by_vnode_id_queue      |   idling    | 0              | 1000           | 100            | sync objs by vnode-id
-    leo_per_object_queue            |   idling    | 0              | 1000           | 100            | recover inconsistent objsx
+    leo_per_object_queue            |   idling    | 0              | 1000           | 100            | recover inconsistent objs
 
 .. _mq-suspend-command:
 
