@@ -144,7 +144,7 @@ Overview
 ^^^^^^^^^
 
 LeoFS Storage MQ is controllable mechanism manually. We've published ``mq-suspend`` and ``mq-resume`` command in ``leofs-adm`` script.
-In addition, LeoFS's MQ mechanism is affected by ``the watchdog mechanism`` to realize reduction of comsumption of message costs.
+In addition, LeoFS's MQ mechanism is affected by ``the watchdog mechanism`` to reduce comsumption of message costs.
 
 Description of the each MQ
 """"""""""""""""""""""""""
@@ -246,3 +246,9 @@ mq-resume <storage-node> <mq-id>
 
     $ ./leofs-adm mq-resume storage_0@127.0.0.1 leo_delete_dir_queue
     OK
+
+See Also
+^^^^^^^^
+
+* `LeoFS Storage configuration <../configuration/configuration_2.html>`_
+* `LeoFS Watchdog configuration <../configuration/configuration_7.html>`_

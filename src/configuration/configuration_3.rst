@@ -165,8 +165,10 @@ LeoFS Gateway configuration
 | snmp_agent                                          | ./snmp/snmpa_gateway_0/LEO-GATEWAY         | Directory of SNMP agent configuration                                                                              |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
-* See also
-    * `LeoFS watchdog configuration <configuration_7.html>`_
+See Also
+^^^^^^^^
+
+* `LeoFS watchdog configuration <configuration_7.html>`_
 
 
 Erlang VM configuration
@@ -207,8 +209,10 @@ Erlang VM configuration
 | snmp_conf                                           | ./snmp/snmpa_storage_0/leo_gateway_snmp    | SNMPA configuration files directory                                                                                |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
-* See also
-    * |erlang-erl|
+See Also
+^^^^^^^^
+
+* |erlang-erl|
 
 
 .. |erlang-erl| raw:: html

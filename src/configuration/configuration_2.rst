@@ -18,7 +18,6 @@ LeoFS Storage configuration
 * Location of configuration file:
     * *<leofs-home-dir>/package/storage/etc/leo_storage.conf* OR */usr/local/leofs/<version>/leo_storage/etc/leo_storage.conf*
 
-
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 |Property                                             | Default Value                              | Description                                                                                                        |
 +=====================================================+============================================+====================================================================================================================+
@@ -198,10 +197,11 @@ LeoFS Storage configuration
 | snmp_agent                                          | ./snmp/snmpa_gateway_0/LEO-GATEWAY         | Directory of SNMP agent configuration                                                                              |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
+See Also
+^^^^^^^^
 
-* See also
-    * `LeoFS watchdog configuration <configuration_7.html>`_
-    * `LeoFS auto-compaction configuration <configuration_8.html>`_
+* `LeoFS watchdog configuration <configuration_7.html>`_
+* `LeoFS auto-compaction configuration <configuration_8.html>`_
 
 
 Erlang VM configuration
@@ -242,9 +242,30 @@ Erlang VM configuration
 | snmp_conf                                           | ./snmp/snmpa_storage_0/leo_storage_snmp    | SNMPA configuration files directory                                                                                |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
-* See also
-    * |erlang-erl|
+See Also
+^^^^^^^^
 
+* |erlang-erl|
+
+
+Configuration related to MQ
+---------------------------
+
+LeoFS's MQ mechanism is affected by ``the watchdog mechanism`` to reduce comsumption of message costs. Dinamically updated items are ``a num of batch processes`` and ``an interval``.
+
+
+The watchdog automatically adjusts value of ``a num of batch processes`` between ``mq.num_of_batch_process_min`` and ``mq.num_of_batch_process_max``, which is increased or decreased with ``mq.num_of_batch_process_step``, On the other hands value of ``an interval`` is adjusted  between ``mq.interval_between_batch_procs_min`` and ``mq.interval_between_batch_procs_max``, which is increased or decreased with ``mq.interval_between_batch_procs_step``.
+
+.. image:: ../../_static/images/leofs-mq-figure.png
+   :width: 320px
+
+\
+
+See Also
+^^^^^^^^
+
+* `LeoFS Storage Operation <../admin_guide/admin_guide_3.html>`_
+* `LeoFS Watchdog configuration <../configuration/configuration_7.html>`_
 
 .. |erlang-erl| raw:: html
 

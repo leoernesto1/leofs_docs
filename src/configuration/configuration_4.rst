@@ -18,7 +18,8 @@ Each LeoFS node provides a built in SNMP server which allows to connect external
 LeoFS Manager
 ^^^^^^^^^^^^^^
 
-a. SNMPA Properties
+SNMPA Properties
+"""""""""""""""""
 
 \
 
@@ -36,7 +37,8 @@ a. SNMPA Properties
 | snmpa_manager_2  | Port: 4022                         |
 +------------------+------------------------------------+
 
-b. SNMPA Items
+SNMPA Items
+""""""""""""
 
 \
 
@@ -70,7 +72,8 @@ b. SNMPA Items
 | 11               | ETS memory usage                   |
 +------------------+------------------------------------+
 
-c. Method of confirmation
+Check the configuration
+""""""""""""""""""""""""
 
 ::
 
@@ -94,7 +97,8 @@ c. Method of confirmation
 LeoFS Storage
 ^^^^^^^^^^^^^^
 
-a. SNMPA Properties
+SNMPA Properties
+"""""""""""""""""
 
 \
 
@@ -114,7 +118,8 @@ a. SNMPA Properties
 | snmpa_storage_3  | Port: 4013                         |
 +------------------+------------------------------------+
 
-b. SNMPA Items
+SNMPA Items
+""""""""""""
 
 \
 
@@ -183,7 +188,8 @@ b. SNMPA Items
 +------------------+------------------------------------+
 
 
-c. Method of confirmation
+Check the configuration
+""""""""""""""""""""""""
 
 ::
 
@@ -219,7 +225,8 @@ c. Method of confirmation
 LeoFS Gateway
 ^^^^^^^^^^^^^^
 
-a. SNMPA Properties
+SNMPA Properties
+"""""""""""""""""
 
 \
 
@@ -235,7 +242,8 @@ a. SNMPA Properties
 | snmpa_gateway_1  | Port: 4001                         |
 +------------------+------------------------------------+
 
-b. SNMPA Items
+SNMPA Items
+""""""""""""
 
 \
 
@@ -295,7 +303,8 @@ b. SNMPA Items
 | 21               | Total cached size                  |
 +------------------+------------------------------------+
 
-c. Method of confirmation
+Check the configuration
+""""""""""""""""""""""""
 
 ::
 

@@ -7,8 +7,8 @@
 .. index::
     CDN Integration
 
-CDN Integration
-========================
+Administration of CDN Integration
+=================================
 
 Since
 -------
