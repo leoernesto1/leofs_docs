@@ -215,6 +215,23 @@ See Also
 * |erlang-erl|
 
 
+Configuration related to Disk Cache
+-----------------------------------
+
+Since the number of directories to store cache files will be equal to ``cache.cache_workers`` and the max size per one directory has been determined by ``Maximum cacheable object size = cache.cache_disc_capacity / cache.cache_workers``.
+
+And also, when size of an object more than ``cache.cache_max_content_len``, LeoFS Gateway avoids a request similar to the above.
+
+* Figure of a disk cache:
+    * cache.cache_workers = 16
+    * cache.cache_disc_capacity = 500MB
+
+.. image:: ../../_static/images/leofs-gateway-disk-cache-size.png
+   :width: 640px
+
+\
+
+
 .. |erlang-erl| raw:: html
 
    <a href="http://erlang.org/doc/man/erl.html" target="_blank">Eralng - erl</a>
