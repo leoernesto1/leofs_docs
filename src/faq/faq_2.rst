@@ -19,6 +19,7 @@ Features
 
 * LeoFS have covered almost major |AmazonS3API| but not all.
 * If you use |MultiPartUploadAPI|, the size of a part of an object must be less than the size of a chunked object in LeoFS.
+* 
 
 See Also:
     * `Amazon S3 API and Interface <s3_api.html>`_

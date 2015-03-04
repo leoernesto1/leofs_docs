@@ -215,12 +215,15 @@ See Also
 * |erlang-erl|
 
 
+.. index::
+   pair: LeoFS Gateway; Configuration related to Disk Cache
+
 Configuration related to Disk Cache
 -----------------------------------
 
-Since the number of directories to store cache files will be equal to ``cache.cache_workers`` and the max size per one directory has been determined by ``Maximum cacheable object size = cache.cache_disc_capacity / cache.cache_workers``.
+A total number of directories to store cache files is equal to ``cache.cache_workers``. A maximum size of a cacheable object per a directory has been determined by ``Maximum cacheable object size = cache.cache_disc_capacity / cache.cache_workers``. If size of a requested object more than the maximum size, LeoFS Gateway avoids the request.
 
-And also, when size of an object more than ``cache.cache_max_content_len``, LeoFS Gateway avoids a request similar to the above.
+And also, when size of a requested object more than ``cache.cache_max_content_len``, LeoFS Gateway similarly avoids the request.
 
 * Figure of a disk cache:
     * cache.cache_workers = 16
