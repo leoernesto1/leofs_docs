@@ -223,7 +223,7 @@ Configuration related to Disk Cache
 
 A total number of directories to store cache files is equal to ``cache.cache_workers``. A maximum size of a cacheable object per a directory has been determined by ``Maximum cacheable object size = cache.cache_disc_capacity / cache.cache_workers``. If size of a requested object more than the maximum size, LeoFS Gateway avoids storing the object into the disk cache.
 
-And also, when size of a requested object more than ``cache.cache_max_content_len``, LeoFS Gateway is similar to the above.
+And also, when size of a requested object more than ``cache.cache_max_content_len``, LeoFS Gateway similarly refuses storing the object into the disk cache.
 
 * Figure of a disk cache:
     * cache.cache_workers = 16
