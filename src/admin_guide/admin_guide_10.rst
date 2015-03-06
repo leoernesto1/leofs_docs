@@ -11,14 +11,14 @@ System Maintenance
 ==================
 
 .. index::
-    pair: System maintenance; Upgrade old version to 1.2.4
+    pair: System maintenance; Upgrade old version to 1.2.7
 
 \
 
-Upgrade your old version LeoFS to v1.2.4
+Upgrade your old version LeoFS to v1.2.7
 ----------------------------------------
 
-This section describes the way of replacement of old LeoFS to v1.2.4
+This section describes the way of replacement of old LeoFS to v1.2.7
 
 Upgrade flow diagram
 ^^^^^^^^^^^^^^^^^^^^
