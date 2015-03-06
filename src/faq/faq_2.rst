@@ -36,13 +36,14 @@ See Also:
 Operations
 ----------
 
-* When you upgrade your LeoFS, you can NOT change the metadata storage as |KVS| - ``bitcask`` or ``leveldb`` can be used in LeoFS - used by LeoFS Storage. In the future, we will provide the data converting tool which enables to take over the metadata.
+* When you upgrade your LeoFS, you can NOT change the metadata storage as |KVS| - ``bitcask`` or ``leveldb`` can be used in LeoFS - used by LeoFS Storage. We recommend users to replace ``bitcask`` with ``leveldb`` by using |leofs_utils/tools/b2l|.
 * Compaction is needed to execute manually for now. We're planning to provide the feature Auto Compaction with LeoFS v1.2.
 
 See Also:
     * `Configuration of Storage nodes <configuration_2.html>`_
     * `Upgrade your old version LeoFS to v1.1.0 <admin_guide_10.html>`_
     * `The roadmap of LeoFS <faq_1.html#is-there-the-roadmap-of-leofs>`_
+    * |leofs_utils/tools/b2l|
 
 ----
 
@@ -92,4 +93,7 @@ See Also:
 
    <a href="https://github.com/leo-project/leofs/issues/190" target="_blank">Multipart uploads of large files produces partially corrupted data when upload chunk size</a>
 
+.. |leofs_utils/tools/b2l| raw:: html
+
+   <a href="https://github.com/leo-project/leofs_utils/tree/develop/tools/b2l" target="_blank">leofs_utils/tools/b2l</a>
 
