@@ -38,43 +38,43 @@ Install Erlang and LeoFS on each server
 * :ref:`Install LeoFS <install_leofs_label>`
 
 
-Configuration - Edit *"vm.args"* on each server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Configuration - Edit *"leo_\*.conf"* on each server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* File path: "$LEOFS_ROOT/package/leo_*/etc/vm.args"
+* File path: "$LEOFS_ROOT/package/leo_*/etc/leo_*.conf"
 * Precondition
-    * ``-name`` must be unique for each node in the LeoFS cluster
+    * ``nodename`` must be unique for each node in the LeoFS cluster
 
-* Edit *Manager-master's vm.args*
+* Edit *Manager-master's leo_manager.conf*
 
 .. code-block:: bash
 
-    ## Name of the node
-    -name manager_0@10.0.1.101
+    ## Name of the Node
+    nodename = manager_0@10.0.1.101
     ... omitted below
 
-* Edit *Manager-slave's vm.args*
+* Edit *Manager-slave's leo_manager.conf*
 
 .. code-block:: bash
 
-    ## Name of the node
-    -name manager_1@10.0.1.102
+    ## Name of the Node
+    nodename = manager_1@10.0.1.102
     ... omitted below
 
-* Edit *Gateway's vm.args*
+* Edit *Gateway's leo_gateway.conf*
 
 .. code-block:: bash
 
-    ## Name of the node
-    -name gateway_0@10.0.1.103
+    ## Name of the Node
+    nodename = gateway_0@10.0.1.103
     ... omitted below
 
-* Edit *Storage's vm.args*
+* Edit *Storage's leo_storage.conf*
 
 .. code-block:: bash
 
-    ## Name of the node
-    -name storage_0@10.0.1.104
+    ## Name of the Node
+    nodename = storage_0@10.0.1.104
     ... omitted below
 
 Configuration - Consistency level
@@ -83,7 +83,7 @@ Configuration - Consistency level
 * Reference: :ref:`The consistency level <system-configuration-label>`
 * Edit *Manager's leo_manager.conf*
     * You only need to modify *Manager-master* for the consistency level.
-    * "$LEOFS_ROOT/package/leo_manager_0/etc/app.config"
+    * "$LEOFS_ROOT/package/leo_manager_0/etc/leo_manager.conf"
 
 .. code-block:: bash
 
