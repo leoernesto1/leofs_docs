@@ -251,13 +251,25 @@ See Also
 Configuration related to MQ
 ---------------------------
 
-LeoFS's MQ mechanism is affected by ``the watchdog mechanism`` to reduce comsumption of message costs. Dinamically updated items are ``a num of batch processes`` and ``an interval``.
+LeoFS's MQ mechanism is affected by **the watchdog mechanism** in order to reduce costs of a message comsumption. MQ dinamically updates ``a num of batch processes`` and ``an interval`` *(Figure: Number-of-batch-processes and interval)*.
 
+* *Figure: Number-of-batch-processes and interval*
 
-The watchdog automatically adjusts value of ``a num of batch processes`` between ``mq.num_of_batch_process_min`` and ``mq.num_of_batch_process_max``, which is increased or decreased with ``mq.num_of_batch_process_step``, On the other hands value of ``an interval`` is adjusted  between ``mq.interval_between_batch_procs_min`` and ``mq.interval_between_batch_procs_max``, which is increased or decreased with ``mq.interval_between_batch_procs_step``.
+.. image:: ../../_static/images/leofs-mq-figure.jpg
+   :width: 240px
 
-.. image:: ../../_static/images/leofs-mq-figure.png
-   :width: 320px
+\
+
+As of *Figure: Relationship of Watchdog and MQ*, the watchdog automatically adjusts value of **a num of batch processes** between ``mq.num_of_batch_process_min`` and ``mq.num_of_batch_process_max``, which is increased or decreased with ``mq.num_of_batch_process_step``.
+
+On the other hands value of **an interval** is adjusted between ``mq.interval_between_batch_procs_min`` and ``mq.interval_between_batch_procs_max``, which is increased or decreased with ``mq.interval_between_batch_procs_step``.
+
+When the each value reached the min value, the MQ changes the status to ``suspending``, after that the node's processing costs is changed to low, the MQ updates the status to ``running``, again.
+
+* *Figure: Relationship between Watchdog and MQ*
+
+.. image:: ../../_static/images/leofs-watchdog-mq.jpg
+   :width: 640px
 
 \
 
