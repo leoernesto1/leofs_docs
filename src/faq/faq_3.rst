@@ -81,6 +81,77 @@ See Also:
     * `recover-node command <../admin_guide/admin_guide_4.html#recover-node-command>`_
     * `leo_storage.conf <../configuration/configuration_2.html>`_
 
+\
+
+
+What should I do when Too many processes errors happen?
+-------------------------------------------------------
+
+LeoFS usually try to keep the number of Erlang processes as minimum as possible, but there are some exceptions when doing something asynchronously.
+
+* Replicating an object to the non-primary assigned nodes
+* Retrying to replicate an object when the previous attempt failed
+
+Given that LeoFS suffered from very high load AND there are some nodes downed for some reason, The number of Erlang processes gradually have increased and might have reached the sysmte limit.
+
+We recommend users to set an appropriate value which depends on your workload to the ``+P option``. Also if the ``+P option`` does NOT work for you, there are some possibilities that some external system resources like disk, network equipments have broken, Please check out the dmesg/syslog on your sysmtem.
+
+See Also:
+    * |erlang-p|
+
+\
+
+
+Why does starting a leo_storage using bitcask as metadata take too much time?
+-----------------------------------------------------------------------------
+
+When starting a leo_storage with bitcask, since leo_storage always call the ``bitcask:merge`` operation, starting process may take too much time if leo_storage stored lots of objects. We recommend users to replace ``bitcask`` with ``leveldb`` by using |b2l|.
+
+
+How do I set "a number of containers" at LeoFS Storage configuration?
+---------------------------------------------------------------------
+
+Objects/files are stored into LeoFS Storage containers which are log-structured files. So LeoFS has the ``data-compaction`` mechanism in order to remove unncessary objects/files from the object-containers of LeoFS Storage.
+
+LeoFS's performance is affected by the data-compaction. And also, LeoFS Storage temporally creates a new file of a object-container corresponding to the compaction target container, which means during the data-compaction needs disk space for the new file of object-container(s).
+
+If ``write/update/delete operation`` is a lot, we recommend that the number of containers is 32 OR 64 because it's possible to make effect of the data-compaction at a minimum as much as possible.
+
+In conclusiton:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Read operation > Write operation:
+    * # of containers = 8
+* A lot of Write/Update/Delete:
+    * # of containers = 32 OR 64 *(depends on the disk capacity and performance)*
+
+
+leo_storage can not start due to "enif_send_failed on non smp vm"
+---------------------------------------------------------------------
+
+When starting leo_storage on a single core machine which crashes with an erl_nif error.
+
+.. code-block:: bash
+
+    ## Error log
+    enif_send: env==NULL on non-SMP VM
+    Aborted (core dumped)
+
+
+In this case, you have faced with |issue_120|.
+You need to set a Erlang's VM flag - ``-smp`` in your leo_storage configuration - *leo_storage.conf* as follows:
+
+.. code-block:: bash
+
+    ## leo_storage.conf
+    erlang.smp = enable
+
+
+See also:
+    * |erl_nif|
+    * |leo_storage configuration|
+    * |leo_storage.conf|
+
 
 .. |leofs-adm| raw:: html
 
@@ -102,3 +173,26 @@ See Also:
 
    <a href="http://project-fifo.net" target="_blank">Project FiFo</a>
 
+.. |erlang-p| raw:: html
+
+   <a href="http://erlang.org/doc/man/erl.html#+P" target="_blank">Erlang - +P</a>
+
+.. |b2l| raw:: html
+
+   <a href="https://github.com/leo-project/leofs_utils/tree/develop/tools/b2l" target="_blank">Tool:Converting metadata from bitcask to leveldb</a>
+
+.. |erl_nif| raw:: html
+
+   <a href="http://www.erlang.org/doc/man/erl_nif.html#enif_send" target="_blank">Erlang - erl_nif</a>
+
+.. |leo_storage configuration| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/configuration/configuration_2.html" >LeoFS documentation - leo_storage configuration</a>
+
+.. |leo_storage.conf| raw:: html
+
+   <a href="https://github.com/leo-project/leo_storage/blob/develop/priv/leo_storage.conf" target="_blank">leo_storage - leo_storage.conf</a>
+
+.. |issue_120| raw:: html
+
+   <a href="https://github.com/basho/eleveldb/issues/120" target="_blank">eleveldb's issue#120</a>

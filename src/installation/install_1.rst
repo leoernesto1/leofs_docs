@@ -7,10 +7,10 @@
 
 Install Erlang
 ---------------
-LeoFS development currently targets Debian 6, Ubuntu-Server 12.04 LTS or Higher and CentOS 6.5, but should work on
+LeoFS development currently targets Debian 6, Ubuntu-Server 14.04 LTS or Higher and CentOS 6.5/7.0, but should work on
 most Linux platforms with the following software installed:
 
-* `Erlang/OTP R16B03-1 <http://www.erlang.org/download_release/23>`_
+* `Erlang 17.4 <http://www.erlang.org/download_release/27>`_
 
 .. note:: We recommend this installation method. Please follow the relevant instructions for your environment.
 
@@ -34,7 +34,7 @@ Install required libraries using yum (CentOS 6.5)
 .. index::
    pair: Install; Ubuntu/Debian
 
-Install required libraries using apt-get (Ubuntu Server 12.04 LTS or Higher)
+Install required libraries using apt-get (Ubuntu Server 14.04 LTS or Higher)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 .. code-block:: bash
@@ -46,8 +46,8 @@ Install required libraries using apt-get (Ubuntu Server 12.04 LTS or Higher)
 .. index::
    pair: Install; libatomic_ops
 
-Install "libatomic_ops" for R16B03-1  *(both CentOS and Ubuntu)*
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Install "libatomic_ops" for Erlang 17.4  *(both CentOS and Ubuntu)*
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 .. code-block:: bash
 
@@ -63,16 +63,16 @@ Install "libatomic_ops" for R16B03-1  *(both CentOS and Ubuntu)*
 .. index::
    pair: Install; Download Erlang
 
-Download "Erlang R16B03-1"
+Download "Erlang 17.4"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
-   ## [R16B03-1]
    $ cd $WORK_DIR
-   $ wget http://www.erlang.org/download/otp_src_R16B03-1.tar.gz
+   $ wget http://www.erlang.org/download/otp_src_17.4.tar.gz
 
 \
+
 
 .. index::
    pair: Install; Build Erlang on CentOS
@@ -82,10 +82,10 @@ Build Erlang on CentOS 6.5
 
 .. code-block:: bash
 
-   $ tar xzf otp_src_R16B03-1.tar.gz
-   $ cd otp_src_R16B03-1
+   $ tar xzf otp_src_17.4.tar.gz
+   $ cd otp_src_17.4
    $ CFLAGS="-DOPENSSL_NO_EC=1" \
-     ./configure --prefix=/usr/local/erlang/R16B03-1 \
+     ./configure --prefix=/usr/local/erlang/17.4 \
                  --enable-smp-support \
                  --enable-m64-build \
                  --enable-halfword-emulator \
@@ -109,9 +109,9 @@ Build Erlang on Ubuntu/Debian
 
 .. code-block:: bash
 
-   $ tar xzf otp_src_R16B03-1.tar.gz
-   $ cd otp_src_R16B03-1
-   $ ./configure --prefix=/usr/local/erlang/R16B03-1 \
+   $ tar xzf otp_src_17.4.tar.gz
+   $ cd otp_src_17.4
+   $ ./configure --prefix=/usr/local/erlang/17.4 \
                  --enable-smp-support \
                  --enable-m64-build \
                  --enable-halfword-emulator \
@@ -136,8 +136,8 @@ Confirm
 .. code-block:: bash
 
     $ erl
-    Erlang R16B03-1 (erts-5.10.4) [source] [64-bit halfword] [smp:8:8] [async-threads:10] [kernel-poll:false]
+    Erlang/OTP 17 [erts-6.3] [source] [64-bit] [smp:8:8] [async-threads:10] [kernel-poll:false]
 
-    Eshell V5.10.4  (abort with ^G)
+    Eshell V6.3  (abort with ^G)
     1>
 

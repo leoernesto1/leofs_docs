@@ -10,7 +10,7 @@
 Install LeoFS
 -------------
 
-This installation method is based on a source build, so if you do not have Erlang already installed, you need to first install Erlang. Also, building LeoFS from source requires Erlang R15B03-1 or R16B03-1.
+This installation method is based on a source build, so if you do not have Erlang already installed, you need to first install Erlang. Also, building LeoFS from source requires Erlang R16B03-1 or 17.4.
 
 
 File structure

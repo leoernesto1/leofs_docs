@@ -23,7 +23,6 @@ Testing without a load balancer
     * You need to edit ``/etc/hosts`` in your client machine(s)
     * You can use any S3 client, like
         * :ref:`Program Lang's clients <aws-sdk-ruby-label>`
-        * :ref:`s3fs-c <s3fs-c-label>`
         * :ref:`s3cmd <s3cmd-label>`
         * :ref:`DragonDisk <dragondisk-label>`
 * Servers configuration (only `ip` and `name`)

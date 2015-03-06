@@ -132,10 +132,47 @@ Commit detached and attached nodes to join the cluster AND Rebalance objects in 
 .. index::
    pair: LeoFS Storage MQ; LeoFS Storage operation
 
-Storage MQ Operation [1.2.0-]
------------------------------
+Storage MQ Operation
+--------------------
 
-* LeoFS Storage MQ is controllable mechanism manually. We've published ``mq-suspend`` and ``mq-resume`` command in ``leofs-adm`` script.
+Since
+^^^^^^^^^
+
+LeoFS v1.2.2
+
+Overview
+^^^^^^^^^
+
+LeoFS Storage MQ is controllable mechanism manually. We've published ``mq-suspend`` and ``mq-resume`` command in ``leofs-adm`` script.
+In addition, LeoFS's MQ mechanism is affected by ``the watchdog mechanism`` to reduce comsumption of message costs.
+
+Description of the each MQ
+""""""""""""""""""""""""""
+
++---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Id                              | Description                                                                                                                                             |
++=================================+=========================================================================================================================================================+
+| leo_delete_dir_queue            | After executed ``leofs-adm delete-bucket``, messages of deletion object is added into the queue.                                                        |
++---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| leo_comp_meta_with_dc_queue     | After executed ``leofs-adm recover-cluster``, messages of comparison of metadata w/remote-node is added into the queue.                                 |
++---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| leo_sync_obj_with_dc_queue      | After executed ``leofs-adm recover-cluster``, messages of synchronization of objects w/remote-node is added into the queue.                             |
++---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| leo_recovery_node_queue         | After executed ``leofs-adm recover-node``, messages of recovery objects of a node is added into the queue.                                              |
++---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| leo_async_deletion_queue        | After executed ``leofs-adm delete-bucket`` OR deletion of a bucket OR deletion of an object, message of async deletion of objs is added into the queue. |
++---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| leo_rebalance_queue             | After executed ``leofs-adm rebalance``, messages of rebalance is added in to the queue.                                                                 |
++---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| leo_sync_by_vnode_id_queue      | After executed ``leofs-adm rebalance``, messages of synchronization of virtual-nodes is added into the queue.                                           |
++---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| leo_per_object_queue            | After executed ``leofs-adm rebalance`` OR ``leofs-adm recover-file`` OR ``leofs-adm recover-node``                                                      |
+|                                 | OR fixing inconsistent object(s) with the recovery data mechanism, messages of recover inconsistent objects is added into the queue.                    |
++---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+Commands
+""""""""
 
 +--------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 | **Shell**                                                                | **Description**                                                                                   |
@@ -156,25 +193,42 @@ Storage MQ Operation [1.2.0-]
 mq-stats <storage-node>
 ^^^^^^^^^^^^^^^^^^^^^^^
 
+You can check tatuses of the message queues in the LeoFS's storage node.
+\
+Explanation of columns:
+
++-----------------+------------------------------------------------------------------------------------------------+
+| **Column**      | **Description**                                                                                |
++=================+================================================================================================+
+| state           | A status of the MQ - [idling, running, suspending]                                             |
++-----------------+------------------------------------------------------------------------------------------------+
+| number of msgs  | A number of messages in the queue                                                              |
++-----------------+------------------------------------------------------------------------------------------------+
+| batch of msgs   | A batch of messages of the MQ's message-consumption                                            |
++-----------------+------------------------------------------------------------------------------------------------+
+| interval        | An interval time between the batch processing                                                  |
++-----------------+------------------------------------------------------------------------------------------------+
+
 .. code-block:: bash
 
     $ ./leofs-adm mq-stats storage_0@127.0.0.1
-                 id                |    state    | num of msgs |            description
-   --------------------------------+-------------+-------------|-----------------------------------
-    leo_delete_dir_queue           |   idling    | 0           | delete directories
-    leo_comp_meta_with_dc_queue    |   idling    | 0           | compare metadata w/remote-node
-    leo_sync_obj_with_dc_queue     |   idling    | 0           | sync objs w/remote-node
-    leo_recovery_node_queue        |   idling    | 0           | recovery objs of node
-    leo_async_deletion_queue       |   idling    | 0           | async deletion of objs
-    leo_rebalance_queue            |   idling    | 0           | rebalance objs
-    leo_sync_by_vnode_id_queue     |   idling    | 0           | sync objs by vnode-id
-    leo_per_object_queue           |   idling    | 0           | recover inconsistent objs
-
+                  id                |    state    | number of msgs | batch of msgs  |    interval    |            description
+    --------------------------------+-------------+----------------|----------------|----------------|-----------------------------------
+    leo_delete_dir_queue            |   idling    | 0              | 1000           | 100            | delete directories
+    leo_comp_meta_with_dc_queue     |   idling    | 0              | 1000           | 100            | compare metadata w/remote-node
+    leo_sync_obj_with_dc_queue      |   idling    | 0              | 1000           | 100            | sync objs w/remote-node
+    leo_recovery_node_queue         |   idling    | 0              | 1000           | 100            | recovery objs of node
+    leo_async_deletion_queue        |   idling    | 0              | 1000           | 100            | async deletion of objs
+    leo_rebalance_queue             |   running   | 2167           | 1400           | 10             | rebalance objs
+    leo_sync_by_vnode_id_queue      |   idling    | 0              | 1000           | 100            | sync objs by vnode-id
+    leo_per_object_queue            |   idling    | 0              | 1000           | 100            | recover inconsistent objs
 
 .. _mq-suspend-command:
 
 mq-suspend <storage-node> <mq-id>
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. note:: When turning on the watchdog mechanism, this command is ignored.
 
 .. code-block:: bash
 
@@ -186,7 +240,15 @@ mq-suspend <storage-node> <mq-id>
 mq-resume <storage-node> <mq-id>
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. note:: When turning on the watchdog mechanism, this command is ignored.
+
 .. code-block:: bash
 
     $ ./leofs-adm mq-resume storage_0@127.0.0.1 leo_delete_dir_queue
     OK
+
+See Also
+^^^^^^^^
+
+* `LeoFS Storage configuration <../configuration/configuration_2.html>`_
+* `LeoFS Watchdog configuration <../configuration/configuration_7.html>`_

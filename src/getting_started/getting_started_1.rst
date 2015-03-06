@@ -146,9 +146,9 @@ Clients
 ^^^^^^^
 
 * You can now connect to LeoFS using any S3 client, including:
-    * :ref:`Ruby - ‘aws-sdk’ <aws-sdk-ruby-label>`
-    * :ref:`FUSE - ‘S3FS-C’ <s3fs-c-label>`
-    * :ref:`GUI  - ‘Dragon Disk’ <dragondisk-label>`
+    * :ref:`Ruby  - ‘aws-sdk’ <aws-sdk-ruby-label>`
+    * :ref:`CUI   -  's3cmd' <s3cmd-label>`
+    * :ref:`GUI   - ‘Dragon Disk’ <dragondisk-label>`
 
 Using LeoFS
 ^^^^^^^^^^^

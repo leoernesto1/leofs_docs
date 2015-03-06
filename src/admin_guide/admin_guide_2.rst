@@ -236,7 +236,7 @@ Enclose the file-path with double quotation.
 \
 
 If you want to retrieve a chunk object which is part of a large object,
-Append `\n` and the chunk number to the file-path.
+Append `\\n` and the chunk number to the file-path.
 
 .. code-block:: bash
 
