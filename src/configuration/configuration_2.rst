@@ -248,6 +248,9 @@ See Also
 * |erlang-erl|
 
 
+.. index::
+   pair: LeoFS Storage; Configuration related to MQ
+
 Configuration related to MQ
 ---------------------------
 
@@ -278,6 +281,44 @@ See Also
 
 * `LeoFS Storage Operation <../admin_guide/admin_guide_3.html>`_
 * `LeoFS Watchdog configuration <../configuration/configuration_7.html>`_
+
+\
+
+.. index::
+   pair: LeoFS Storage; Configuration related to the auto-compaction
+
+Configuration related to the auto-compaction
+--------------------------------------------
+
+LeoFS's auto-compaction mechanism is affected by **the watchdog mechanism** in order to reduce costs of a the processing. The auto-compaction dinamically updates ``a num of batch processes`` and ``an interval`` *(Figure: Number-of-batch-processes and interval)*. The basic design of the relationship with the watchdog is similar to the MQ.
+
+* *Figure: Number-of-batch-processes and interval*
+
+.. image:: ../../_static/images/leofs-auto-compaction-figure.jpg
+   :width: 240px
+
+\
+
+As of *Figure: Relationship of Watchdog and Auto-compaction*, the watchdog automatically adjusts value of **a num of batch processes** between ``compaction.batch_procs_min`` and ``compaction.batch_procs_max``, which is increased or decreased with ``compaction.batch_procs_step``.
+
+On the other hands value of **an interval** is adjusted between ``compaction.waiting_time_min`` and ``compaction.waiting_time_max``, which is increased or decreased with ``compaction.waiting_time_step``.
+
+When the each value reached the min value, the auto-compaction changes the status to ``suspending``, after that the node's processing costs is changed to low, the auto-compaction updates the status to ``running``, again.
+
+* *Figure: Relationship between Watchdog and Auto-compaction*
+
+.. image:: ../../_static/images/leofs-watchdog-auto-compaction.jpg
+   :width: 640px
+
+\
+
+See Also
+^^^^^^^^
+
+* `LeoFS Storage Operation <../admin_guide/admin_guide_3.html>`_
+* `LeoFS Auto-compaction configuration <../configuration/configuration_8.html>`_
+
+\
 
 .. |erlang-erl| raw:: html
 
