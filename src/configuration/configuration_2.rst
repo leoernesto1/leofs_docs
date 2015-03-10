@@ -320,6 +320,40 @@ See Also
 
 \
 
+.. index::
+   pair: LeoFS Storage; Configuration of eager check I/O scheduling for Erlang's VM
+
+Configuration of eager check I/O scheduling for Erlang's VM
+-----------------------------------------------------------
+
+If you adopt LeoFS v1.2.7 w/Erlang 17.4, we recommend you turn on ``erlang.secio``. So you need to modify the configuration files and the schema files as follows.
+
+* Turn on ``erlang.secio`` at leo_storage.conf
+
+.. code-block:: erlang
+
+    erlang.secio = false
+
+
+* Uncomment every rows of ``erlang.secio`` at leo_storage.schema
+
+.. code-block:: erlang
+
+    {mapping,
+      "erlang.secio",
+      "vm_args.+secio",
+      [
+        {default, false}
+      ]}.
+
+\
+
+See Also
+^^^^^^^^
+
+* |erlang-erl|
+
+
 .. |erlang-erl| raw:: html
 
    <a href="http://erlang.org/doc/man/erl.html" target="_blank">Eralng - erl</a>
