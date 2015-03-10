@@ -54,11 +54,20 @@ NFS Support
 * NFS implemantation with LeoFS v1.1 is a subset of |NFSv3|. Lock manager protocol, ``Authentication``, and ``Owner/Permission`` management are NOT covered.
 * The `ls` command may take too much time when the target directory have lots of child. We're planning to provide better performance with LeoFS v.1.4.
 * If you use LeoFS with NFS, you should set the size of a chunked object in LeoFS to 1MB (1048576Bytes), otherwise the efficiency of disk utilization can be decreased.
+* What are the requirements to run LeoFS with NFS?
+
+  * LeoFS Gateway(NFS Server)
+
+    We've supporeted the targets Debian 6, Ubuntu-Server 14.04 LTS or Higher and CentOS 6.5/7.0 as LeoFS does, but should work on most linux platforms. In addition, We've confirmed LeoFS with NFS works properly on the latest FreeBSD and SmartOS by using |NFS_TEST_TOOL|.
+
+  * NFS Client
+
+    Since we still have not implemented NFS Lock Manager, you can only use NFS Clients which support disabling lock option(the linux client might be the only option for now). After we will finish implementing NFS Lock Manager, You can use NFS Client on other xnix platforms as well.
 
 See Also:
     * `Configuration of LeoFS Gateway nodes <configuration_3.html>`_
     * |ISSUE_198|
-
+    * |NFS_LOCK_MANAGER_PROTO|
 
 ----
 
@@ -94,4 +103,12 @@ See Also:
 .. |leofs_utils/tools/b2l| raw:: html
 
    <a href="https://github.com/leo-project/leofs_utils/tree/develop/tools/b2l" target="_blank">leofs_utils/tools/b2l</a>
+
+.. |NFS_TEST_TOOL| raw:: html
+
+   <a href="https://github.com/leo-project/leo_gateway/blob/develop/test/leo_nfs_integration_tests.sh" target="_blank">NFS Integration Test Tool</a>
+
+.. |NFS_LOCK_MANAGER_PROTO| raw:: html
+
+   <a href="http://tools.ietf.org/html/rfc1813#page-114" target="_blank">NFS Lock Manager Protocol</a>
 
