@@ -332,7 +332,7 @@ If you adopt LeoFS v1.2.7 w/Erlang 17.4, we recommend you turn on ``erlang.secio
 
 .. code-block:: erlang
 
-    erlang.secio = false
+    erlang.secio = true
 
 
 * Uncomment every rows of ``erlang.secio`` at leo_storage.schema
