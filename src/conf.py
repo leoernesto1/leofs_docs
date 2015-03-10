@@ -43,7 +43,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'LeoFS'
-copyright = u'2012-2014, Leo Project - leo-project.net/leofs/ - Sponsored by Rakuten, Inc. and Rakuten Institute of Technology'
+copyright = u'2012-2015, Leo Project - leo-project.net/leofs/ - Sponsored by Rakuten, Inc. and Rakuten Institute of Technology'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -254,7 +254,7 @@ texinfo_documents = [
 epub_title = u'LeoFS'
 epub_author = u'Leo Project'
 epub_publisher = u'Leo Project'
-epub_copyright = u'2012-2014, Leo Project'
+epub_copyright = u'2012-2015, Leo Project'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
