@@ -65,7 +65,7 @@ LeoFS is supporting the following features:
 * High Performance without |SPOF|
     * According to the original cache mechanism and sophisticated innternal architecture, LeoFS keeps high performance regardless of amount and kind of data without |SPOF|.
 
-In near future, LeoFS is going to provide the powerful features with LeoFS v1.2.
+In near future, LeoFS is going to provide the powerful features with LeoFS v1.2, v1.4 and v2.0.
 
 * NFS support
 * LeoFS insight

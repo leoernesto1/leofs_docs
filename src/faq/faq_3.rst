@@ -33,7 +33,8 @@ Currently after restarting a storage node,  you need to issue the resume command
     leofs-adm resume storage_0@127.0.0.1
 
 
-We're planing to provide LeoFS's autonomic-operation like `auto-compaction`, `auto-rebalance` and others with LeoFS v1.2.
+We're planing to provide LeoFS's autonomic-operation like `auto-compaction`, `auto-rebalance` and others with LeoFS v1.2, v1.4 and v2.0.
+Actually, `auto-compaction` which was already supported with v1.2.
 
 \
 

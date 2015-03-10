@@ -37,12 +37,10 @@ Operations
 ----------
 
 * When you upgrade your LeoFS, you can NOT change the metadata storage as |KVS| - ``bitcask`` or ``leveldb`` can be used in LeoFS - used by LeoFS Storage. We recommend users to replace ``bitcask`` with ``leveldb`` by using |leofs_utils/tools/b2l|.
-* Compaction is needed to execute manually for now. We're planning to provide the feature Auto Compaction with LeoFS v1.2.
 
 See Also:
     * `Configuration of Storage nodes <configuration_2.html>`_
-    * `Upgrade your old version LeoFS to v1.1.0 <admin_guide_10.html>`_
-    * `The roadmap of LeoFS <faq_1.html#is-there-the-roadmap-of-leofs>`_
+    * `Upgrade your old version LeoFS to v1.2.7 <admin_guide_10.html>`_
     * |leofs_utils/tools/b2l|
 
 ----
@@ -54,7 +52,7 @@ NFS Support
 -----------
 
 * NFS implemantation with LeoFS v1.1 is a subset of |NFSv3|. Lock manager protocol, ``Authentication``, and ``Owner/Permission`` management are NOT covered.
-* The `ls` command may take too much time when the target directory have lots of child. We're planning to provide better performance with LeoFS v.1.2.
+* The `ls` command may take too much time when the target directory have lots of child. We're planning to provide better performance with LeoFS v.1.4.
 * If you use LeoFS with NFS, you should set the size of a chunked object in LeoFS to 1MB (1048576Bytes), otherwise the efficiency of disk utilization can be decreased.
 
 See Also:
