@@ -243,7 +243,7 @@ Configuration of eager check I/O scheduling for Erlang's VM
 
 If you adopt LeoFS v1.2.7 w/Erlang 17.4, we recommend you turn on ``erlang.secio``. So you need to modify the configuration files and the schema files as follows.
 
-* Turn on ``erlang.secio`` at leo_storage.conf
+* Turn on ``erlang.secio`` at leo_gateway.conf
 
 .. code-block:: erlang
 
