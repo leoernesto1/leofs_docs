@@ -24,7 +24,7 @@ LeoFS v1.2.2
 Purpose
 -------
 
-The watchdog mechanism monitors CPU, Erlang-IO and Disk status in order to keep running a node stably. Also, this mechanism communicates ``the MQ mechanism`` and `the auto-compaction <configuration_8.html>`_/compaction mechanism.
+The watchdog mechanism monitors CPU, Erlang-IO, disk and a storage cluster status in order to keep running a node stably. Also, this mechanism communicates with ``the MQ mechanism`` and `the auto-compaction <configuration_8.html>`_/compaction mechanism. Their processings - *comsumption of MQ's messages and deletion of unnecessary objects* are affected by this mechanism.
 
 .. index::
    pair: Watchdog; Getting Started
@@ -92,6 +92,8 @@ LeoFS Gateway's watchdog properties:
 Configuration of LeoFS Storage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. note:: All default setting of the watchdogs are disabled. Before getting use this mechanism, you need to turn on them.
+
 Modify |leo_storage_conf| at the section of watchdog.
 
 LeoFS Storage's watchdog properties:
@@ -145,6 +147,12 @@ LeoFS Storage's watchdog properties:
 | watchdog.disk.threshold_disk_wkb     | 262144            | Threshold disk write KB/sec                                                           |
 +--------------------------------------+-------------------+---------------------------------------------------------------------------------------+
 | watchdog.disk.target_devices         | []                | Target devices for checking disk utilization                                          |
++--------------------------------------+-------------------+---------------------------------------------------------------------------------------+
+| **Cluster**                                                                                                                                      |
++--------------------------------------+-------------------+---------------------------------------------------------------------------------------+
+| watchdog.cluster.is_enabled          | false             | Is cluster-watchdog enabled? *[true|false]*                                           |
++--------------------------------------+-------------------+---------------------------------------------------------------------------------------+
+| watchdog.cluster.interval            | 1                 | Watch interval *(sec)*                                                                |
 +--------------------------------------+-------------------+---------------------------------------------------------------------------------------+
 
 See Also
