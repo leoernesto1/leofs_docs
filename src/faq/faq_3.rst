@@ -1,6 +1,6 @@
 .. =========================================================
 .. LeoFS documentation
-.. Copyright (c) 2012-2014 Rakuten, Inc.
+.. Copyright (c) 2012-2015 Rakuten, Inc.
 .. http://leo-project.net/
 .. =========================================================
 

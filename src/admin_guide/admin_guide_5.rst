@@ -1,14 +1,14 @@
 .. =========================================================
 .. LeoFS documentation
-.. Copyright (c) 2012-2014 Rakuten, Inc.
+.. Copyright (c) 2012-2015 Rakuten, Inc.
 .. http://leo-project.net/
 .. =========================================================
 
 .. index::
     Compaction commands
 
-Compaction Commands
-===================
+Data Compaction Commands
+========================
 
 Remove logical deleted objects and meta data and check the current disk usage
 
