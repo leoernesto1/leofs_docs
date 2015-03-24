@@ -17,6 +17,9 @@ LeoFS Manager
 .. image:: ../../_static/images/leofs-architecture.007.jpg
    :width: 760px
 
-In addition, *LeoFS Manager* provides `LeoFS administration commands <admin_guide.html>`_ to be able to easily operate LeoFS.
+In addition, *LeoFS Manager* provides |admin_commands| to be able to easily operate LeoFS.
 *LeoFS administration commands* already cover entire LeoFS functions.
 
+.. |admin_commands| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_commands.html" target="_blank">LeoFS administration commands</a>

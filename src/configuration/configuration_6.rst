@@ -69,7 +69,7 @@ Configuration
 Start LeoFS as NFS Server with other dependent programs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `Start LeoFS as usual <http://leo-project.net/leofs/docs/admin_guide_1.html>`_
+- |admin_guide_1|
 
 - Start rpcbind
 
@@ -266,3 +266,7 @@ Limits <http://leo-project.net/leofs/docs/faq/faq_2.html#nfs-support>`_
 .. |leo_gateway_conf| raw:: html
 
    <a href="https://github.com/leo-project/leo_gateway/blob/develop/priv/leo_gateway.conf#L46" target="_blank">leo_gateway.conf</a>
+
+.. |admin_guide_1| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_1.html" target="_blank">Start LeoFS as usual</a>

@@ -18,7 +18,7 @@ Also, what we carefully desined LeoFS is 3 things:
 
 * To keep running and No SPOF
 * To keep high-performance, regardless of the kind of data and amout data
-* To provide easy administration, we already provide LeoFS CUI and `GUI console <leo_center.html>`_.
+* To provide easy administration, we already provide LeoFS CUI and |gui_console|.
 
 
 .. toctree::
@@ -28,3 +28,6 @@ Also, what we carefully desined LeoFS is 3 things:
    leofs-storage-detail
    leofs-manager-detail
 
+.. |gui_console| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/leo_center/leo_center.html" target="_blank">GUI console</a>

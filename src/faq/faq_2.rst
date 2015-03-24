@@ -22,8 +22,8 @@ Features
 * 
 
 See Also:
-    * `Amazon S3 API and Interface <s3_api.html>`_
-    * `Configuration of LeoFS Gateway nodes <configuration_3.html>`_
+    * |s3_api_interface|
+    * |configuration_3|
     * |ISSUE_177|
     * |ISSUE_190|
 
@@ -39,8 +39,8 @@ Operations
 * When you upgrade your LeoFS, you can NOT change the metadata storage as |KVS| - ``bitcask`` or ``leveldb`` can be used in LeoFS - used by LeoFS Storage. We recommend users to replace ``bitcask`` with ``leveldb`` by using |leofs_utils/tools/b2l|.
 
 See Also:
-    * `Configuration of Storage nodes <configuration_2.html>`_
-    * `Upgrade your old version LeoFS to v1.2.7 <admin_guide_10.html>`_
+    * |configuration_2|
+    * |admin_guide_10|
     * |leofs_utils/tools/b2l|
 
 ----
@@ -65,7 +65,7 @@ NFS Support
     Since we still have not implemented NFS Lock Manager, you can only use NFS Clients which support disabling lock option(the linux client might be the only option for now). After we will finish implementing NFS Lock Manager, You can use NFS Client on other xnix platforms as well.
 
 See Also:
-    * `Configuration of LeoFS Gateway nodes <configuration_3.html>`_
+    * |configuration_3|
     * |ISSUE_198|
     * |NFS_LOCK_MANAGER_PROTO|
 
@@ -112,3 +112,18 @@ See Also:
 
    <a href="http://tools.ietf.org/html/rfc1813#page-114" target="_blank">NFS Lock Manager Protocol</a>
 
+.. |s3_api_interface| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/s3api_interface/s3_api.html" target="_blank">Amazon S3 API and Interface</a>
+
+.. |configuration_2| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/configuration/configuration_2.html" target="_blank">Configuration of LeoFS Storage</a>
+
+.. |configuration_3| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/configuration/configuration_3.html" target="_blank">Configuration of Gateway nodes</a>
+
+.. |admin_guide_10| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_10.html" target="_blank">Upgrade your old version LeoFS to v1.2.7</a>

@@ -57,7 +57,7 @@ If you need to change DC's Id and Cluster's Id, set ``system.dc_id`` and ``clust
 Set |leo_manager_conf_2|
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You need to set RPC-related configuration as follows to be able to communicate each cluster with LeoFS's RPC. Regarding ``rpc.server.listen_port``, which is used by the `join-cluster <admin_guide_9.html#join-cluster>`_ command.
+You need to set RPC-related configuration as follows to be able to communicate each cluster with LeoFS's RPC. Regarding ``rpc.server.listen_port``, which is used by the |join-cluster| command.
 
 
 
@@ -127,3 +127,7 @@ You need to set RPC-related configuration as follows to be able to communicate e
 .. |multidc-replication| raw:: html
 
    <a href="http://leo-project.net/leofs/blog-entry-3.html" target="_blank">Multi Data Center Replication (1st phase)</a>
+
+.. |join-cluster| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_9.html#join-cluster" target="_blank">join-cluster</a>
