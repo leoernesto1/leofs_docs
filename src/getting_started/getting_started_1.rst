@@ -158,7 +158,7 @@ Using LeoFS
 
 .. code-block:: bash
 
-    $ leofs-adm add-bucket <bcuket> <access-key-id>
+    $ leofs-adm add-bucket <bucket> <access-key-id>
     ok
 
 * Insert some data into LeoFS by using any S3 client as mentioned above

@@ -237,8 +237,7 @@ controlling owners/permissions/symbolic links/special files.
 Configuration
 -------------
 
-You can change the port number the NFS/Mount server use and the number
-of acceptor processes at ``leo_gateway.conf``.
+You can change the port number of the NFS/Mount server and the number of acceptor processes at ``leo_gateway.conf``.
 
 +------------------------+------------------------------------------------------------------------+
 | Property               | Description                                                            |
