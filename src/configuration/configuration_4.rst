@@ -28,7 +28,7 @@ SNMPA Properties
 +==================+====================================+
 | Port             | 4020 .. 4022                       |
 +------------------+------------------------------------+
-| Branch           | 1.3.6.1.4.1.35450.11               |
+| Branch           | 1.3.6.1.4.1.35450.15               |
 +------------------+------------------------------------+
 | snmpa_manager_0  | Port: 4020                         |
 +------------------+------------------------------------+
@@ -71,24 +71,40 @@ SNMPA Items
 +------------------+------------------------------------+
 | 11               | ETS memory usage                   |
 +------------------+------------------------------------+
+| **allocated memmory**                                 |
++------------------+------------------------------------+
+| 12               | Used/allocated memory for 1min     |
++------------------+------------------------------------+
+| 13               | Allocated memory for 1min          |
++------------------+------------------------------------+
+| 14               | Used/allocated memory for 5min     |
++------------------+------------------------------------+
+| 15               | Allocated memory for 5min          |
++------------------+------------------------------------+
+
+
 
 Check the configuration
 """"""""""""""""""""""""
 
 ::
 
-    $ snmpwalk -v 2c -c public 127.0.0.1:4020 .1.3.6.1.4.1.35450.11
-    SNMPv2-SMI::enterprises.35450.11.1.0 = STRING: "manager_0@127.0.0.1"
-    SNMPv2-SMI::enterprises.35450.11.2.0 = Gauge32: 123
-    SNMPv2-SMI::enterprises.35450.11.3.0 = Gauge32: 30289989
-    SNMPv2-SMI::enterprises.35450.11.4.0 = Gauge32: 24256857
-    SNMPv2-SMI::enterprises.35450.11.5.0 = Gauge32: 6033132
-    SNMPv2-SMI::enterprises.35450.11.6.0 = Gauge32: 1914017
-    SNMPv2-SMI::enterprises.35450.11.7.0 = Gauge32: 123
-    SNMPv2-SMI::enterprises.35450.11.8.0 = Gauge32: 30309552
-    SNMPv2-SMI::enterprises.35450.11.9.0 = Gauge32: 24278377
-    SNMPv2-SMI::enterprises.35450.11.10.0 = Gauge32: 6031175
-    SNMPv2-SMI::enterprises.35450.11.11.0 = Gauge32: 1935758
+    $ snmpwalk -v 2c -c public 127.0.0.1:4020 .1.3.6.1.4.1.35450
+    SNMPv2-SMI::enterprises.35450.15.1.0 = STRING: "manager_0@127.0.0.1"
+    SNMPv2-SMI::enterprises.35450.15.2.0 = Gauge32: 123
+    SNMPv2-SMI::enterprises.35450.15.3.0 = Gauge32: 30289989
+    SNMPv2-SMI::enterprises.35450.15.4.0 = Gauge32: 24256857
+    SNMPv2-SMI::enterprises.35450.15.5.0 = Gauge32: 6033132
+    SNMPv2-SMI::enterprises.35450.15.6.0 = Gauge32: 1914017
+    SNMPv2-SMI::enterprises.35450.15.7.0 = Gauge32: 123
+    SNMPv2-SMI::enterprises.35450.15.8.0 = Gauge32: 30309552
+    SNMPv2-SMI::enterprises.35450.15.9.0 = Gauge32: 24278377
+    SNMPv2-SMI::enterprises.35450.15.10.0 = Gauge32: 6031175
+    SNMPv2-SMI::enterprises.35450.15.11.0 = Gauge32: 1935758
+    SNMPv2-SMI::enterprises.35450.15.12.0 = Gauge32: 75
+    SNMPv2-SMI::enterprises.35450.15.13.0 = Gauge32: 84635402
+    SNMPv2-SMI::enterprises.35450.15.14.0 = Gauge32: 78
+    SNMPv2-SMI::enterprises.35450.15.15.0 = Gauge32: 88735915
 
 
 .. index::
@@ -107,7 +123,7 @@ SNMPA Properties
 +==================+====================================+
 | Port             | 4010 .. 4013                       |
 +------------------+------------------------------------+
-| Branch           | 1.3.6.1.4.1.35450.24               |
+| Branch           | 1.3.6.1.4.1.35450                  |
 +------------------+------------------------------------+
 | snmpa_storage_0  | Port: 4010                         |
 +------------------+------------------------------------+
@@ -186,6 +202,16 @@ SNMPA Items
 +------------------+------------------------------------+
 | 24               | # of rebalance messages            |
 +------------------+------------------------------------+
+| **allocated memmory**                                 |
++------------------+------------------------------------+
+| 31               | Used/allocated memory for 1min     |
++------------------+------------------------------------+
+| 32               | Allocated memory for 1min          |
++------------------+------------------------------------+
+| 33               | Used/allocated memory for 5min     |
++------------------+------------------------------------+
+| 34               | Allocated memory for 5min          |
++------------------+------------------------------------+
 
 
 Check the configuration
@@ -193,31 +219,35 @@ Check the configuration
 
 ::
 
-    $ snmpwalk -v 2c -c public 127.0.0.1:4010 .1.3.6.1.4.1.35450.24
-    SNMPv2-SMI::enterprises.35450.24.1.0 = STRING: "storage_0@127.0.0.1"
-    SNMPv2-SMI::enterprises.35450.24.2.0 = Gauge32: 227
-    SNMPv2-SMI::enterprises.35450.24.3.0 = Gauge32: 33165164
-    SNMPv2-SMI::enterprises.35450.24.4.0 = Gauge32: 24504020
-    SNMPv2-SMI::enterprises.35450.24.5.0 = Gauge32: 8661144
-    SNMPv2-SMI::enterprises.35450.24.6.0 = Gauge32: 1952903
-    SNMPv2-SMI::enterprises.35450.24.7.0 = Gauge32: 227
-    SNMPv2-SMI::enterprises.35450.24.8.0 = Gauge32: 33379629
-    SNMPv2-SMI::enterprises.35450.24.9.0 = Gauge32: 24493694
-    SNMPv2-SMI::enterprises.35450.24.10.0 = Gauge32: 8885935
-    SNMPv2-SMI::enterprises.35450.24.11.0 = Gauge32: 1941680
-    SNMPv2-SMI::enterprises.35450.24.12.0 = Gauge32: 0
-    SNMPv2-SMI::enterprises.35450.24.13.0 = Gauge32: 0
-    SNMPv2-SMI::enterprises.35450.24.14.0 = Gauge32: 0
-    SNMPv2-SMI::enterprises.35450.24.15.0 = Gauge32: 0
-    SNMPv2-SMI::enterprises.35450.24.16.0 = Gauge32: 0
-    SNMPv2-SMI::enterprises.35450.24.17.0 = Gauge32: 0
-    SNMPv2-SMI::enterprises.35450.24.18.0 = Gauge32: 0
-    SNMPv2-SMI::enterprises.35450.24.19.0 = Gauge32: 0
-    SNMPv2-SMI::enterprises.35450.24.20.0 = Gauge32: 0
-    SNMPv2-SMI::enterprises.35450.24.21.0 = Gauge32: 0
-    SNMPv2-SMI::enterprises.35450.24.22.0 = Gauge32: 0
-    SNMPv2-SMI::enterprises.35450.24.23.0 = Gauge32: 0
-    SNMPv2-SMI::enterprises.35450.24.24.0 = Gauge32: 0
+    $ snmpwalk -v 2c -c public 127.0.0.1:4010 .1.3.6.1.4.1.35450
+    SNMPv2-SMI::enterprises.35450.34.1.0 = STRING: "storage_0@127.0.0.1"
+    SNMPv2-SMI::enterprises.35450.34.2.0 = Gauge32: 227
+    SNMPv2-SMI::enterprises.35450.34.3.0 = Gauge32: 33165164
+    SNMPv2-SMI::enterprises.35450.34.4.0 = Gauge32: 24504020
+    SNMPv2-SMI::enterprises.35450.34.5.0 = Gauge32: 8661144
+    SNMPv2-SMI::enterprises.35450.34.6.0 = Gauge32: 1952903
+    SNMPv2-SMI::enterprises.35450.34.7.0 = Gauge32: 227
+    SNMPv2-SMI::enterprises.35450.34.8.0 = Gauge32: 33379629
+    SNMPv2-SMI::enterprises.35450.34.9.0 = Gauge32: 24493694
+    SNMPv2-SMI::enterprises.35450.34.10.0 = Gauge32: 8885935
+    SNMPv2-SMI::enterprises.35450.34.11.0 = Gauge32: 1941680
+    SNMPv2-SMI::enterprises.35450.34.12.0 = Gauge32: 0
+    SNMPv2-SMI::enterprises.35450.34.13.0 = Gauge32: 0
+    SNMPv2-SMI::enterprises.35450.34.14.0 = Gauge32: 0
+    SNMPv2-SMI::enterprises.35450.34.15.0 = Gauge32: 0
+    SNMPv2-SMI::enterprises.35450.34.16.0 = Gauge32: 0
+    SNMPv2-SMI::enterprises.35450.34.17.0 = Gauge32: 0
+    SNMPv2-SMI::enterprises.35450.34.18.0 = Gauge32: 0
+    SNMPv2-SMI::enterprises.35450.34.19.0 = Gauge32: 0
+    SNMPv2-SMI::enterprises.35450.34.20.0 = Gauge32: 0
+    SNMPv2-SMI::enterprises.35450.34.21.0 = Gauge32: 0
+    SNMPv2-SMI::enterprises.35450.34.22.0 = Gauge32: 0
+    SNMPv2-SMI::enterprises.35450.34.23.0 = Gauge32: 0
+    SNMPv2-SMI::enterprises.35450.34.24.0 = Gauge32: 0
+    SNMPv2-SMI::enterprises.35450.34.31.0 = Gauge32: 75
+    SNMPv2-SMI::enterprises.35450.34.32.0 = Gauge32: 84635402
+    SNMPv2-SMI::enterprises.35450.34.33.0 = Gauge32: 78
+    SNMPv2-SMI::enterprises.35450.34.34.0 = Gauge32: 88735915
 
 .. index::
    pair: SNMP; LeoFS Gatewat
@@ -235,7 +265,7 @@ SNMPA Properties
 +==================+====================================+
 | Port             | 4000 .. 4001                       |
 +------------------+------------------------------------+
-| Branch           | 1.3.6.1.4.1.35450.27               |
+| Branch           | 1.3.6.1.4.1.35450                  |
 +------------------+------------------------------------+
 | snmpa_gateway_0  | Port: 4000                         |
 +------------------+------------------------------------+
@@ -302,34 +332,49 @@ SNMPA Items
 +------------------+------------------------------------+
 | 21               | Total cached size                  |
 +------------------+------------------------------------+
+| **allocated memmory**                                 |
++------------------+------------------------------------+
+| 31               | Used/allocated memory for 1min     |
++------------------+------------------------------------+
+| 32               | Allocated memory for 1min          |
++------------------+------------------------------------+
+| 33               | Used/allocated memory for 5min     |
++------------------+------------------------------------+
+| 34               | Allocated memory for 5min          |
++------------------+------------------------------------+
 
 Check the configuration
 """"""""""""""""""""""""
 
 ::
 
-    $ snmpwalk -v 2c -c public 127.0.0.1:4000 .1.3.6.1.4.1.35450.21
-    SNMPv2-SMI::enterprises.35450.21.1.0 = STRING: "gateway_0@127.0.0.1"
-    SNMPv2-SMI::enterprises.35450.21.2.0 = Gauge32: 279
-    SNMPv2-SMI::enterprises.35450.21.3.0 = Gauge32: 45266128
-    SNMPv2-SMI::enterprises.35450.21.4.0 = Gauge32: 36653905
-    SNMPv2-SMI::enterprises.35450.21.5.0 = Gauge32: 8612223
-    SNMPv2-SMI::enterprises.35450.21.6.0 = Gauge32: 2276519
-    SNMPv2-SMI::enterprises.35450.21.7.0 = Gauge32: 279
-    SNMPv2-SMI::enterprises.35450.21.8.0 = Gauge32: 45157433
-    SNMPv2-SMI::enterprises.35450.21.9.0 = Gauge32: 36385227
-    SNMPv2-SMI::enterprises.35450.21.10.0 = Gauge32: 8772210
-    SNMPv2-SMI::enterprises.35450.21.11.0 = Gauge32: 2261105
-    SNMPv2-SMI::enterprises.35450.21.12.0 = Gauge32: 0
-    SNMPv2-SMI::enterprises.35450.21.13.0 = Gauge32: 13
-    SNMPv2-SMI::enterprises.35450.21.14.0 = Gauge32: 0
-    SNMPv2-SMI::enterprises.35450.21.15.0 = Gauge32: 3
-    SNMPv2-SMI::enterprises.35450.21.16.0 = Gauge32: 24
-    SNMPv2-SMI::enterprises.35450.21.17.0 = Gauge32: 0
-    SNMPv2-SMI::enterprises.35450.21.18.0 = Gauge32: 21
-    SNMPv2-SMI::enterprises.35450.21.19.0 = Gauge32: 39
-    SNMPv2-SMI::enterprises.35450.21.20.0 = Gauge32: 3
-    SNMPv2-SMI::enterprises.35450.21.21.0 = Gauge32: 565700
+    $ snmpwalk -v 2c -c public 127.0.0.1:4000 .1.3.6.1.4.1.35450
+    SNMPv2-SMI::enterprises.35450.34.1.0 = STRING: "gateway_0@127.0.0.1"
+    SNMPv2-SMI::enterprises.35450.34.2.0 = Gauge32: 279
+    SNMPv2-SMI::enterprises.35450.34.3.0 = Gauge32: 45266128
+    SNMPv2-SMI::enterprises.35450.34.4.0 = Gauge32: 36653905
+    SNMPv2-SMI::enterprises.35450.34.5.0 = Gauge32: 8612223
+    SNMPv2-SMI::enterprises.35450.34.6.0 = Gauge32: 2276519
+    SNMPv2-SMI::enterprises.35450.34.7.0 = Gauge32: 279
+    SNMPv2-SMI::enterprises.35450.34.8.0 = Gauge32: 45157433
+    SNMPv2-SMI::enterprises.35450.34.9.0 = Gauge32: 36385227
+    SNMPv2-SMI::enterprises.35450.34.10.0 = Gauge32: 8772210
+    SNMPv2-SMI::enterprises.35450.34.11.0 = Gauge32: 2261105
+    SNMPv2-SMI::enterprises.35450.34.12.0 = Gauge32: 0
+    SNMPv2-SMI::enterprises.35450.34.13.0 = Gauge32: 13
+    SNMPv2-SMI::enterprises.35450.34.14.0 = Gauge32: 0
+    SNMPv2-SMI::enterprises.35450.34.15.0 = Gauge32: 3
+    SNMPv2-SMI::enterprises.35450.34.16.0 = Gauge32: 24
+    SNMPv2-SMI::enterprises.35450.34.17.0 = Gauge32: 0
+    SNMPv2-SMI::enterprises.35450.34.18.0 = Gauge32: 21
+    SNMPv2-SMI::enterprises.35450.34.19.0 = Gauge32: 39
+    SNMPv2-SMI::enterprises.35450.34.20.0 = Gauge32: 3
+    SNMPv2-SMI::enterprises.35450.34.21.0 = Gauge32: 565700
+    SNMPv2-SMI::enterprises.35450.34.31.0 = Gauge32: 75
+    SNMPv2-SMI::enterprises.35450.34.32.0 = Gauge32: 84635402
+    SNMPv2-SMI::enterprises.35450.34.33.0 = Gauge32: 78
+    SNMPv2-SMI::enterprises.35450.34.34.0 = Gauge32: 88735915
+
 
 
 .. |Nagios| raw:: html
