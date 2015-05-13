@@ -154,6 +154,40 @@ See also:
     * |leo_storage.conf|
 
 
+Why is the speed of rebalance/recover command too slow?
+-------------------------------------------------------
+
+You must hit |issue_359|.
+Since this issue has been fixed with LeoFS v1.2.9, we'd recommend you upgrading to 1.2.9 or higher one, and Set an appropriate value for your environment to `mq.num_of_mq_procs` in your leo_storage.conf.
+
+See also:
+    * |leo_storage configuration|
+    * |leo_storage.conf|
+
+
+How to run LeoFS on docker container?
+-------------------------------------
+
+|hack4docker| also should work for LeoFS.
+
+
+Why does LeoFS's SNMP I/F give me wrong values(0) instead of correct values?
+----------------------------------------------------------------------------
+
+You must hit |issue_361|.
+Since this issue has been fixed with LeoFS v1.2.9, we'd recommend you upgrading to 1.2.9 or higher one.
+
+When adding a new storage node, that node doesn't appear with `leofs-adm status` Why?
+-----------------------------------------------------------------------------------
+
+If you changed a WRONG node name before stopping the daemon,
+As a result, when a new daemon was starting, it failed to detect that the previous was still running and
+stop command did not work too.
+Since you can notice this kind of mistake in error.log with LeoFS v1.2.9, we'd recommend you upgrading to 1.2.9 or higher one.
+
+See also:
+    * |report_on_google_group|
+
 .. |leofs-adm| raw:: html
 
    <a href="https://github.com/leo-project/leofs/blob/master/leofs-adm" target="_blank">leofs-adm</a>
@@ -197,3 +231,19 @@ See also:
 .. |issue_120| raw:: html
 
    <a href="https://github.com/basho/eleveldb/issues/120" target="_blank">eleveldb's issue#120</a>
+
+.. |issue_359| raw:: html
+
+   <a href="https://github.com/leo-project/leofs/issues/359" target="_blank">LeoFS's issue#359</a>
+
+.. |hack4docker| raw:: html
+
+   <a href="https://stackoverflow.com/questions/17252356/run-a-service-automatically-in-a-docker-container/17673148#17673148" target="_blank">This hack</a>
+
+.. |issue_361| raw:: html
+
+   <a href="https://github.com/leo-project/leofs/issues/361" target="_blank">LeoFS's issue#361</a>
+
+.. |report_on_google_group| raw:: html
+
+   <a href="https://groups.google.com/forum/#!topic/leoproject_leofs/GkO_D3f-SIo" target="_blank">Troubleshooting Adding a Storage Node</a>

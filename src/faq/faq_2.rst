@@ -19,13 +19,14 @@ Features
 
 * LeoFS have covered almost major |AmazonS3API| but not all.
 * If you use |MultiPartUploadAPI|, the size of a part of an object must be less than the size of a chunked object in LeoFS.
-* 
+* When using the Multi DC feature, we have supported up to 2 clusters with LeoFS v1.2.8 or lowers, but we will support over 3 clusters with LeoFS v1.4.
 
 See Also:
     * |s3_api_interface|
     * |configuration_3|
     * |ISSUE_177|
     * |ISSUE_190|
+    * |ISSUE_338|
 
 
 ----
@@ -127,3 +128,7 @@ See Also:
 .. |admin_guide_10| raw:: html
 
    <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_10.html" target="_blank">Upgrade your old version LeoFS to v1.2.7</a>
+
+.. |ISSUE_338| raw:: html
+
+   <a href="https://github.com/leo-project/leofs/issues/338" target="_blank">Support over 3 clusters</a>
