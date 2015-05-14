@@ -178,7 +178,7 @@ You must hit |issue_361|.
 Since this issue has been fixed with LeoFS v1.2.9, we'd recommend you upgrading to 1.2.9 or higher one.
 
 When adding a new storage node, that node doesn't appear with `leofs-adm status` Why?
------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
 
 If you changed a WRONG node name before stopping the daemon,
 As a result, when a new daemon was starting, it failed to detect that the previous was still running and
