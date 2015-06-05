@@ -1,6 +1,6 @@
 .. =========================================================
 .. LeoFS documentation
-.. Copyright (c) 2012-2014 Rakuten, Inc.
+.. Copyright (c) 2012-2015 Rakuten, Inc.
 .. http://leo-project.net/
 .. =========================================================
 
@@ -85,7 +85,7 @@ For administrators
 ^^^^^^^^^^^^^^^^^^
 
 * Easy to install with the packages
-* Easy to operate with `LeoCenter <leo_center.html>`_
+* Easy to operate with |LeoCenterDocs|
 
 ----
 
@@ -97,17 +97,17 @@ What is architecture of LeoFS?
 
 We've been mainly focusing on **High Availability**, **High Scalability** and **High Cost Performance Ratio** since unstructured data such as images, movies and logs have been exponentially increasing day by day, and we needed to build a cloud storage that can handle all them.
 
-LeoFS consists of 3 core components - `LeoFS Gateway <leofs-gateway-detail.html>`_, `Storage <leofs-storage-detail.html>`_ and `Manager <leofs-manager-detail.html>`_. The role of each component is clearly defined.
+LeoFS consists of 3 core components - |leo_gateway_detail|, |leo_storage_detail| and |leo_manager_detail|. The role of each component is clearly defined.
 
 
 .. image:: ../../_static/images/leofs-architecture.001.jpg
    :width: 780px
 
-`LeoFS Gateway <leofs-gateway-detail.html>`_ handles http-requests and http-responses from clients when using REST-API OR S3-API. Also, it has the built-in object-cache system.
+|leo_gateway_detail| handles http-requests and http-responses from clients when using REST-API OR S3-API. Also, it has the built-in object-cache system.
 
-`LeoFS Storage <leofs-storage-detail.html>`_ handles *GET*, *PUT* and *DELETE*, Also it has replicator and recoverer in order to keep running and consistency.
+|leo_storage_detail| handles *GET*, *PUT* and *DELETE*, Also it has replicator and recoverer in order to keep running and consistency.
 
-`LeoFS Manager <leofs-manager-detail.html>`_ always monitors Gateway(s) and Storage(s). Manger monitors node-status and RING(logical routing-table) checksum to keep running and consistency.
+|leo_manager_detail| always monitors Gateway(s) and Storage(s). Manger monitors node-status and RING(logical routing-table) checksum to keep running and consistency.
 
 
 Also, what we payed attention when we desined LeoFS are the following 3 things:
@@ -123,7 +123,7 @@ Also, what we payed attention when we desined LeoFS are the following 3 things:
 Is there the roadmap of LeoFS?
 ------------------------------
 
-We've published LeoFS milestones on both of |GitHub| and `LeoFS website <milestone.html>`_. We may revise the milestones occasionally because there is a possibility to add new features or change priority of implementation. We'll keep them always updated.
+We've published LeoFS milestones on both of |GitHub| and |leo_milestone|. We may revise the milestones occasionally because there is a possibility to add new features or change priority of implementation. We'll keep them always updated.
 
 
 .. image:: ../../_static/images/leofs-milestone-toward-v2.0.png
@@ -141,7 +141,7 @@ We've published LeoFS milestones on both of |GitHub| and `LeoFS website <milesto
 What language is LeoFS written in?
 ----------------------------------
 
-LeoFS is implemented in |Erlang|. Also, `LeoCenter <leo_center.html>`_ as Web GUI Console is written in Ruby and JavaScript.
+LeoFS is implemented in |Erlang|. Also, |LeoCenterDocs| as Web GUI Console is written in Ruby and JavaScript.
 
 See Also:
     * `LeoFS Overview <intro.html>`_
@@ -156,10 +156,7 @@ See Also:
 What language can I use to work with LeoFS?
 -------------------------------------------
 
-LeoFS clients exist for all of the most popular programming languages as S3-API client. See the latest list of clients for `details <s3_client.html>`_.
-
-See Also:
-    * `Amazon S3 Client Tutorials <s3_client.html>`_
+LeoFS clients exist for all of the most popular programming languages as S3-API client. See the latest list of clients for |s3_client_list|.
 
 ----
 
@@ -193,7 +190,31 @@ See Also:
 
    <a href="https://github.com/leo-project/leo_center" target="_blank">LeoCenter on GitHub</a>
 
+.. |LeoCenterDocs| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/leo_center/leo_center.html" target="_blank">LeoCenter on GitHub</a>
+
 .. |Erlang| raw:: html
 
    <a href="http://www.erlang.org/" target="_blank">Erlang</a>
+
+.. |leo_gateway_detail| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/architecture/leofs-gateway-detail.html" target="_blank">LeoFS Gateway</a>
+
+.. |leo_storage_detail| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/architecture/leofs-storage-detail.html" target="_blank">LeoFS Storage</a>
+
+.. |leo_manager_detail| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/architecture/leofs-manager-detail.html" target="_blank">LeoFS Manager</a>
+
+.. |leo_milestone| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/faq/faq_1.html#is-there-the-roadmap-of-leofs" target="_blank">LeoFS Manager</a>
+
+.. |s3_client_list| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/s3api_client/s3_client.html" target="_blank">details</a>
 

@@ -1,6 +1,6 @@
 .. =========================================================
 .. LeoFS documentation
-.. Copyright (c) 2012-2014 Rakuten, Inc.
+.. Copyright (c) 2012-2015 Rakuten, Inc.
 .. http://leo-project.net/
 .. =========================================================
 
@@ -10,7 +10,7 @@
 Install LeoFS
 -------------
 
-This installation method is based on a source build, so if you do not have Erlang already installed, you need to first install Erlang. Also, building LeoFS from source requires Erlang R16B03-1 or 17.4.
+This installation method is based on a source build, so if you do not have Erlang already installed, you need to first install Erlang. Also, building LeoFS from source requires Erlang R16B03-1 or 17.5.
 
 
 File structure

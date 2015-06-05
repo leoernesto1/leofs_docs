@@ -1,20 +1,20 @@
 .. =========================================================
 .. LeoFS documentation
-.. Copyright (c) 2012-2014 Rakuten, Inc.
+.. Copyright (c) 2012-2015 Rakuten, Inc.
 .. http://leo-project.net/
 .. =========================================================
 
 .. index::
     LeoFS Storage operation
 
-Storage Operation
-=================
+LeoFS Storage Operation
+=======================
 
 .. index::
    pair: LeoFS Storage cluster; LeoFS Storage operation
 
-Storage Cluster Operation
--------------------------
+LeoFS Storage's Cluster Operation
+---------------------------------
 
 * LeoFS Storage operation commands are executed on **LeoFS-Manager console** OR the ``leofs-adm`` script.
 * Refer :ref:`LeoFS operation flow diagram <operation-flow-diagram-label>`
@@ -22,21 +22,21 @@ Storage Cluster Operation
 +-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 | **Shell**                                                 | **Description**                                                                                   |
 +===========================================================+===================================================================================================+
-| leofs-adm :ref:`detach <detach-command>` <storage-node>   | * Remove the storage node in the LeoFS storage cluster                                            |
+| leofs-adm :ref:`detach <detach-command>` <storage-node>   | * Remove the storage node from the LeoFS storage cluster                                          |
 |                                                           | * Current status: ``running`` | ``stop``                                                          |
 +-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 | leofs-adm :ref:`suspend <suspend-command>` <storage-node> | * Suspend a storage node for maintenance                                                          |
-|                                                           | * This command does NOT detach the node from the storage cluster                                  |
+|                                                           | * This command is NOT similar to the detach command, just only to suspend the node.               |
 |                                                           | * While suspending, it rejects any requests                                                       |
 |                                                           | * Current status: ``running``                                                                     |
 +-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| leofs-adm :ref:`resume <resume-command>` <storage-node>   | * Resume a storage node for finished maintenance                                                  |
+| leofs-adm :ref:`resume <resume-command>` <storage-node>   | * Resume a storage node until a finished maintenance                                              |
 |                                                           | * Current status: ``suspended`` | ``restarted``                                                   |
 +-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| leofs-adm :ref:`start <start-command>`                    | * Start LeoFS after distributing the RING from LeoFS Manager to LeoFS Storage and LeoFS Gateway   |
+| leofs-adm :ref:`start <start-command>`                    | * Start LeoFS after distributing the RING from LeoFS Manager to LeoFS Storage and Gateway         |
 +-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| leofs-adm :ref:`rebalance <rebalance-command>`            | * Commit detached and attached nodes to join the cluster                                          |
-|                                                           | * Rebalance objects in the cluster based on the updated cluster topology                          |
+| leofs-adm :ref:`rebalance <rebalance-command>`            | * Commit detached and attached nodes to update the cluster and Ring(routing-table)                |
+|                                                           | * Rebalance objects in the cluster which is based on the updated cluster topology                 |
 +-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 
 
@@ -48,7 +48,7 @@ Storage Cluster Operation
 detach <storage-node>
 ^^^^^^^^^^^^^^^^^^^^^
 
-Remove the storage node in the storage cluster
+* Remove the storage node from the storage cluster
 
 .. code-block:: bash
 
@@ -84,7 +84,7 @@ suspend <storage-node>
 resume <storage-node>
 ^^^^^^^^^^^^^^^^^^^^^
 
-Resume the storage node
+* Resume the storage node
 
 .. code-block:: bash
 
@@ -102,7 +102,7 @@ Resume the storage node
 start
 ^^^^^
 
-Start LeoFS after distributing the RING from LeoFS Manager to LeoFS Storage and LeoFS Gateway
+* Start LeoFS after distributing the RING from LeoFS Manager to LeoFS Storage and LeoFS Gateway
 
 .. code-block:: bash
 
@@ -120,7 +120,8 @@ Start LeoFS after distributing the RING from LeoFS Manager to LeoFS Storage and 
 rebalance
 ^^^^^^^^^
 
-Commit detached and attached nodes to join the cluster AND Rebalance objects in the cluster based on the updated cluster topology
+* Commit detached and attached node(s) to update the cluster and Ring(routing-table)
+* Rebalance objects in the cluster which is based on the updated cluster topology
 
 .. code-block:: bash
 

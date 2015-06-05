@@ -1,6 +1,6 @@
 .. =========================================================
 .. LeoFS documentation
-.. Copyright (c) 2012-2014 Rakuten, Inc.
+.. Copyright (c) 2012-2015 Rakuten, Inc.
 .. http://leo-project.net/
 .. =========================================================
 
@@ -19,13 +19,13 @@ LeoFS provides **High Scalability**. Adding and removing nodes is simple and qui
    :width: 760px
 
 
-LeoFS consists of 3 applications - `LeoFS Storage <leofs-storage-detail.html>`_, `LeoFS Gateway <leofs-gateway-detail.html>`_ and `LeoFS Manager <leofs-manager-detail.html>`_ which depend on Erlang.
+LeoFS consists of 3 applications - |leo_storage_detail|, |leo_gateway_detail| and |leo_manager_detail| which depend on Erlang.
 
-`LeoFS Gateway <leofs-gateway-detail.html>`_ handles http-request and http-response from any clients when using REST-API OR S3-API. Also, it is already built in the object-cache mechanism *(memory and disk cache)*.
+|leo_gateway_detail| handles http-request and http-response from any clients when using REST-API OR S3-API. Also, it is already built in the object-cache mechanism *(memory and disk cache)*.
 
-`LeoFS Storage <leofs-storage-detail.html>`_ handles GET, PUT and DELETE objects as well as metadata. Also, it has *replicator*, *recoverer* and *queueing mechanism* in order to keep running a storage node and realise eventual consistency.
+|leo_storage_detail| handles GET, PUT and DELETE objects as well as metadata. Also, it has *replicator*, *recoverer* and *queueing mechanism* in order to keep running a storage node and realise eventual consistency.
 
-`LeoFS Manager <leofs-manager-detail.html>`_ always monitors *LeoFS Gateway* and *LeoFS Storage* nodes. The main monitoring status are *Node status* and *RING's checksum* in order to realise to keep high availability and keep data consistency.
+|leo_manager_detail| always monitors *LeoFS Gateway* and *LeoFS Storage* nodes. The main monitoring status are *Node status* and *RING's checksum* in order to realise to keep high availability and keep data consistency.
 
 
 .. toctree::
@@ -33,3 +33,15 @@ LeoFS consists of 3 applications - `LeoFS Storage <leofs-storage-detail.html>`_,
 
    goal
    milestone
+
+.. |leo_gateway_detail| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/architecture/leofs-gateway-detail.html" target="_blank">LeoFS Gateway</a>
+
+.. |leo_storage_detail| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/architecture/leofs-storage-detail.html" target="_blank">LeoFS Storage</a>
+
+.. |leo_manager_detail| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/architecture/leofs-manager-detail.html" target="_blank">LeoFS Manager</a>

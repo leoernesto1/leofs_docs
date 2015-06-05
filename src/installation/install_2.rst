@@ -1,6 +1,6 @@
 .. =========================================================
 .. LeoFS documentation
-.. Copyright (c) 2012-2014 Rakuten, Inc.
+.. Copyright (c) 2012-2015 Rakuten, Inc.
 .. http://leo-project.net/
 .. =========================================================
 
@@ -12,10 +12,10 @@ XFS-related
 
 .. note:: We highly recommend using an XFS partition, as it is the file system that shows the better results with LeoFS. This section describes the installation instructions related to XFS. If you are deploying LeoFS on a **DEV environment**, you do NOT need to perform this operation.
 
-Install required libraries for XFS with yum (CentOS 6.5)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Install required libraries for XFS with yum (CentOS 6.5/7)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. index::
-   pair: CentOS-6.5; Installation
+   pair: CentOS; Installation
 
 ::
 

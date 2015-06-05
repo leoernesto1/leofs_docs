@@ -1,6 +1,6 @@
 .. =========================================================
 .. LeoFS documentation
-.. Copyright (c) 2012-2014 Rakuten, Inc.
+.. Copyright (c) 2012-2015 Rakuten, Inc.
 .. http://leo-project.net/
 .. =========================================================
 
@@ -69,7 +69,7 @@ Configuration
 Start LeoFS as NFS Server with other dependent programs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `Start LeoFS as usual <http://leo-project.net/leofs/docs/admin_guide_1.html>`_
+- |admin_guide_1|
 
 - Start rpcbind
 
@@ -135,13 +135,13 @@ Confirm that NFS works
 
 .. code-block:: bash
 
-    $ ./leofs-adm whereis photo/newfile
+    $ ./leofs-adm whereis test/newfile
     -------+--------------------------+--------------------------------------+------------+--------------+----------------+----------------+----------------------------
      del?  |           node           |             ring address             |    size    |   checksum   |  # of chunks   |     clock      |             when
     -------+--------------------------+--------------------------------------+------------+--------------+----------------+----------------+----------------------------
            | storage_0@127.0.0.1      | 22f3d93762d31abc5f5704f78edf1691     |        12B |   6f5902ac23 |              0 | 4ffe2d105f1f4  | 2014-07-31 10:29:01 +0900
 
-    $ ./leofs-adm whereis photo/newfile.copy
+    $ ./leofs-adm whereis test/newfile.copy
     -------+--------------------------+--------------------------------------+------------+--------------+----------------+----------------+----------------------------
      del?  |           node           |             ring address             |    size    |   checksum   |  # of chunks   |     clock      |             when
     -------+--------------------------+--------------------------------------+------------+--------------+----------------+----------------+----------------------------
@@ -167,7 +167,7 @@ Confirm that NFS works
 
 .. code-block:: bash
 
-    $ ./leofs-adm whereis photo/newfile
+    $ ./leofs-adm whereis test/newfile
     -------+--------------------------+--------------------------------------+------------+--------------+----------------+----------------+----------------------------
      del?  |           node           |             ring address             |    size    |   checksum   |  # of chunks   |     clock      |             when
     -------+--------------------------+--------------------------------------+------------+--------------+----------------+----------------+----------------------------
@@ -209,7 +209,7 @@ Confirm that NFS works
 
 .. code-block:: bash
 
-    $ ./leofs-adm whereis photo/1/2/3/largefile
+    $ ./leofs-adm whereis test/1/2/3/largefile
     -------+--------------------------+--------------------------------------+------------+--------------+----------------+----------------+----------------------------
      del?  |           node           |             ring address             |    size    |   checksum   |  # of chunks   |     clock      |             when
     -------+--------------------------+--------------------------------------+------------+--------------+----------------+----------------+----------------------------
@@ -237,8 +237,7 @@ controlling owners/permissions/symbolic links/special files.
 Configuration
 -------------
 
-You can change the port number the NFS/Mount server use and the number
-of acceptor processes at ``leo_gateway.conf``.
+You can change the port number of the NFS/Mount server and the number of acceptor processes at ``leo_gateway.conf``.
 
 +------------------------+------------------------------------------------------------------------+
 | Property               | Description                                                            |
@@ -266,3 +265,7 @@ Limits <http://leo-project.net/leofs/docs/faq/faq_2.html#nfs-support>`_
 .. |leo_gateway_conf| raw:: html
 
    <a href="https://github.com/leo-project/leo_gateway/blob/develop/priv/leo_gateway.conf#L46" target="_blank">leo_gateway.conf</a>
+
+.. |admin_guide_1| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_1.html" target="_blank">Start LeoFS as usual</a>

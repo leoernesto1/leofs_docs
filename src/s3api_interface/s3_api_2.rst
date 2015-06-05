@@ -1,6 +1,6 @@
 .. =========================================================
 .. LeoFS documentation
-.. Copyright (c) 2012-2014 Rakuten, Inc.
+.. Copyright (c) 2012-2015 Rakuten, Inc.
 .. http://leo-project.net/
 .. =========================================================
 
@@ -13,7 +13,7 @@ Amazon S3 Interface
 Amazon S3 Official Documentation
 """"""""""""""""""""""""""""""""
 
-* `The official documentation <http://docs.amazonwebservices.com/AmazonS3/2006-03-01/dev/Welcome.html?r=7602>`_
+* |s3_docs_root|
 
 .. _s3-path-label:
 
@@ -23,7 +23,7 @@ How to determine the name of Bucket
 .. index::
    pair: How to determine the name of Bucket; Installation
 
-*  `Virtual Hosting of Buckets <http://docs.amazonwebservices.com/AmazonS3/2006-03-01/dev/VirtualHosting.html>`_
+*  |s3_docs_vhost|
 *   Values used for determining the name:
     * S3 uses the **HTTP Host header** or a **Path segment in the HTTP request line**.
     * How S3 determines what to use depends on the **Domain name**.
@@ -86,3 +86,11 @@ How to determine the name of Bucket
 * Bucket names can contain lowercase letters, numbers, periods (.), dashes (-) and underscores (_).
 * Bucket names must not be formatted as an IP address (e.g., 192.168.5.4).
 * Bucket name cannot start and end with periods (.), dashes (-) and underscores (_).
+
+.. |s3_docs_vhost| raw:: html
+
+   <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html" target="_blank">Virtual Hosting of Buckets</a>
+
+.. |s3_docs_root| raw:: html
+
+   <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html" target="_blank">The official documentation</a>

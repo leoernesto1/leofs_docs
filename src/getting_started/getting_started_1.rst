@@ -1,6 +1,6 @@
 .. =========================================================
 .. LeoFS documentation
-.. Copyright (c) 2012-2014 Rakuten, Inc.
+.. Copyright (c) 2012-2015 Rakuten, Inc.
 .. http://leo-project.net/
 .. =========================================================
 
@@ -158,7 +158,7 @@ Using LeoFS
 
 .. code-block:: bash
 
-    $ leofs-adm add-bucket <bcuket> <access-key-id>
+    $ leofs-adm add-bucket <bucket> <access-key-id>
     ok
 
 * Insert some data into LeoFS by using any S3 client as mentioned above

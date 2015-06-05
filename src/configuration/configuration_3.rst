@@ -1,6 +1,6 @@
 .. =========================================================
 .. LeoFS documentation
-.. Copyright (c) 2012-2014 Rakuten, Inc.
+.. Copyright (c) 2012-2015 Rakuten, Inc.
 .. http://leo-project.net/
 .. =========================================================
 
@@ -78,11 +78,13 @@ LeoFS Gateway configuration
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | **Cache configuration**                                                                                                                                                                                               |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-| cache.cache_workers                                 | 16                                         | Number of cache workers                                                                                            |
+| cache.cache_workers                                 | 16                                         | A number of cache workers at the cache-mechanism for load-balancing                                                |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-| cache.cache_ram_capacity                            | 268435456                                  | Memory cache capacity (Byte)                                                                                       |
+| cache.cache_ram_capacity                            | 268435456                                  | Memory cache capacity (Byte),                                                                                      |
+|                                                     |                                            | Each cache-worker's capacity for memory-cache is ``cache.cache_ram_capacity`` div ``cache.cache_workers``          |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-| cache.cache_disc_capacity                           | 524288000                                  | Disk cache capacity (Byte)                                                                                         |
+| cache.cache_disc_capacity                           | 524288000                                  | Disk cache capacity (Byte),                                                                                        |
+|                                                     |                                            | Each cache-worker's capacity for disk-cache is ``cache.cache_disc_capacity`` div ``cache.cache_workers``           |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | cache.cache_disc_threshold_len                      | 1048576                                    | When the length of the object exceeds this value, stores the object on the local disk                              |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
@@ -118,7 +120,7 @@ LeoFS Gateway configuration
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | watchdog.cpu.threshold_cpu_util                     | 100                                        | Threshold CPU load util *(%)*                                                                                      |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-| *IO*                                                                                                                                                                                                                  |
+| *Erlang IO (Erlang's VM Internal Traffic)*                                                                                                                                                                            |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | watchdog.io.is_enabled                              | false                                      | Enabled or disabled io-watchdog *[true|false]*                                                                     |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
@@ -241,9 +243,9 @@ And also, when size of a requested object more than ``cache.cache_max_content_le
 Configuration of eager check I/O scheduling for Erlang's VM
 -----------------------------------------------------------
 
-If you adopt LeoFS v1.2.7 w/Erlang 17.4, we recommend you turn on ``erlang.secio``. So you need to modify the configuration files and the schema files as follows.
+If you adopt LeoFS v1.2.7 later w/Erlang 17.5, we recommend you turn on ``erlang.secio``. So you need to modify the configuration files and the schema files as follows.
 
-* Turn on ``erlang.secio`` at leo_storage.conf
+* Turn on ``erlang.secio`` at leo_gateway.conf
 
 .. code-block:: erlang
 

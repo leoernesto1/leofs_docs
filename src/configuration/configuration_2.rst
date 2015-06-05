@@ -1,6 +1,6 @@
 .. =========================================================
 .. LeoFS documentation
-.. Copyright (c) 2012-2014 Rakuten, Inc.
+.. Copyright (c) 2012-2015 Rakuten, Inc.
 .. http://leo-project.net/
 .. =========================================================
 
@@ -18,6 +18,14 @@ LeoFS Storage configuration
 * Location of configuration file:
     * *<leofs-home-dir>/package/storage/etc/leo_storage.conf* OR */usr/local/leofs/<version>/leo_storage/etc/leo_storage.conf*
 
+.. note:: You cannot modify the following Leo Storage configurations after launched a system(LeoFS) because the algorithm of retrieving object depends on their configurations, that means Leo Storage cannot handle objects.
+
+* NOT able to change items:
+    * obj_containers.path
+    * obj_containers.num_of_containers
+    * obj_containers.metadata_storage
+    * num_of_vnodes
+
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 |Property                                             | Default Value                              | Description                                                                                                        |
 +=====================================================+============================================+====================================================================================================================+
@@ -27,15 +35,15 @@ LeoFS Storage configuration
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | **LeoFS Storage Basic Configuration**                                                                                                                                                                                 |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-|obj_containers.path                                  | [./avs]                                    | Directories of object-container                                                                                    |
+|obj_containers.path                                  | [./avs]                                    | ``Not able to change items`` Directories of each object-containers                                                 |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-|obj_containers.num_of_containers                     | [8]                                        | A number of object-containers                                                                                      |
+|obj_containers.num_of_containers                     | [8]                                        | ``Not able to change items`` A number of object-containers of each directory                                       |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-|obj_containers.metadata_storage                      | leveldb                                    | Metadata Storage - [bitcask, leveldb]                                                                              |
+|obj_containers.metadata_storage                      | leveldb                                    | ``Not able to change items`` Metadata Storage - [leveldb, bitcask], We recommend ``leveldb``                       |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-|num_of_vnodes                                        | 168                                        | A number of virtual-nodes for the redundant-manager                                                                |
+|num_of_vnodes                                        | 168                                        | ``Not able to change items`` A number of virtual-nodes, which depends on the redundant-manager                     |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-|object_storage.is_strict_check                       | false                                      | Enable strict check between checksum of a metadata and checksum of an object                                       |
+|object_storage.is_strict_check                       | false                                      | Able to strictly check between checksum of a metadata and checksum of the object                                   |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | **Watchdog**                                                                                                                                                                                                          |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
@@ -57,7 +65,7 @@ LeoFS Storage configuration
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | watchdog.cpu.threshold_cpu_util                     | 100                                        | Threshold CPU load util *(%)*                                                                                      |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-| *IO*                                                                                                                                                                                                                  |
+| *Erlang IO (Erlang's VM Internal Traffic)*                                                                                                                                                                            |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | watchdog.io.is_enabled                              | false                                      | Enabled or disabled io-watchdog *[true|false]*                                                                     |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
@@ -326,7 +334,7 @@ See Also
 Configuration of eager check I/O scheduling for Erlang's VM
 -----------------------------------------------------------
 
-If you adopt LeoFS v1.2.7 w/Erlang 17.4, we recommend you turn on ``erlang.secio``. So you need to modify the configuration files and the schema files as follows.
+If you adopt LeoFS v1.2.7 later w/Erlang 17.5, we recommend you turn on ``erlang.secio``. So you need to modify the configuration files and the schema files as follows.
 
 * Turn on ``erlang.secio`` at leo_storage.conf
 

@@ -1,6 +1,6 @@
 .. =========================================================
 .. LeoFS documentation
-.. Copyright (c) 2012-2014 Rakuten, Inc.
+.. Copyright (c) 2012-2015 Rakuten, Inc.
 .. http://leo-project.net/
 .. =========================================================
 
@@ -40,7 +40,7 @@ Begin to communicate between the local cluster and the remote cluster
 
 \
 
-* See Also: `Configuration/Multi data center replication <configuration_5.html>`_
+* See Also: |config_mdc|
 
 .. ### REMOVE-CLUSTER ###
 .. _remove-cluster:
@@ -79,3 +79,6 @@ See the current state of cluster(s)
     -----------+------------+--------------+----------------+-----------------------------
     leofs_2    | dc_2       |   running    |              8 | 2014-03-21 19:17:45 +0900
 
+.. |config_mdc| raw:: html
+
+   <a href="http://leo-project.net/leofs/docs/configuration/configuration_5.html" target="_blank">Configuration/Multi data center replication</a>

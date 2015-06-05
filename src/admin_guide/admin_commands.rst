@@ -1,6 +1,6 @@
 .. =========================================================
 .. LeoFS documentation
-.. Copyright (c) 2012-2014 Rakuten, Inc.
+.. Copyright (c) 2012-2015 Rakuten, Inc.
 .. http://leo-project.net/
 .. =========================================================
 
@@ -58,7 +58,7 @@ leofs-adm Command Line
 +--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
 | leofs-adm :ref:`recover-cluster <recover-cluster-command>` <cluster-id>              | * ``v1.0.0-`` Recover all inconsistent objects in the specified cluster                              |
 +--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
-| **Compaction Commands**                                                                                                                                                                     |
+| **Data Compaction Commands**                                                                                                                                                                |
 +--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
 | leofs-adm :ref:`compact-start <compact-start>` <storage-node> (all|<num-of-targets>) | * Remove unnecessary objects from the node                                                           |
 | [<num-of-compaction-proc>]                                                           | * ``num-of-targets``: It controls the number of containers in parallel                               |
