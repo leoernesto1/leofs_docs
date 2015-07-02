@@ -31,33 +31,41 @@ Retrieve status of every node (default)
 
 .. code-block:: bash
 
-    $ leofs-adm status
-    [System config]
-                    System version : 1.0.0
-                        Cluster Id : leofs_1
-                             DC Id : dc_1
-                    Total replicas : 3
-               # of successes of R : 1
-               # of successes of W : 2
-               # of successes of D : 2
-     # of DC-awareness replicas    : 0
-                         ring size : 2^128
-                 Current ring hash : 8cd79c31
-                    Prev ring hash : 8cd79c31
-    [Multi DC replication settings]
-             max # of joinable DCs : 2
-                # of replicas a DC : 1
+    -----------------------------------+----------
+     Item                              | Value
+    -----------------------------------+----------
+     Basic/Consistency level
+    -----------------------------------+----------
+                        system version | 1.2.11
+                            cluster Id | leofs_1
+                                 DC Id | dc_1
+                        Total replicas | 2
+              number of successes of R | 1
+              number of successes of W | 1
+              number of successes of D | 1
+     number of rack-awareness replicas | 0
+                             ring size | 2^128
+    -----------------------------------+----------
+     Multi DC replication settings
+    -----------------------------------+----------
+            max number of joinable DCs | 2
+               number of replicas a DC | 1
+    -----------------------------------+----------
+     Manager RING hash
+    -----------------------------------+----------
+                     current ring-hash | 3923d007
+                    previous ring-hash | 3923d007
+    -----------------------------------+----------
 
-    [Node(s) state]
+     [State of Node(s)]
     -------+--------------------------+--------------+----------------+----------------+----------------------------
      type  |           node           |    state     |  current ring  |   prev ring    |          updated at
     -------+--------------------------+--------------+----------------+----------------+----------------------------
-      S    | storage_0@127.0.0.1      | running      | 8cd79c31       | 8cd79c31       | 2014-04-03 11:28:20 +0900
-      S    | storage_1@127.0.0.1      | running      | 8cd79c31       | 8cd79c31       | 2014-04-03 11:28:20 +0900
-      S    | storage_2@127.0.0.1      | running      | 8cd79c31       | 8cd79c31       | 2014-04-03 11:28:20 +0900
-      S    | storage_3@127.0.0.1      | running      | 8cd79c31       | 8cd79c31       | 2014-04-03 11:28:20 +0900
-      G    | gateway_0@127.0.0.1      | running      | 8cd79c31       | 8cd79c31       | 2014-04-03 11:28:21 +0900
-      G    | gateway_1@127.0.0.1      | running      | 8cd79c31       | 8cd79c31       | 2014-04-03 11:28:21 +0900
+      S    | storage_0@127.0.0.1      | running      | 3923d007       | 3923d007       | 2015-07-02 15:28:06 +0900
+      S    | storage_1@127.0.0.1      | running      | 3923d007       | 3923d007       | 2015-07-02 15:28:06 +0900
+      S    | storage_2@127.0.0.1      | running      | 3923d007       | 3923d007       | 2015-07-02 15:28:06 +0900
+      S    | storage_3@127.0.0.1      | running      | 3923d007       | 3923d007       | 2015-07-02 15:28:06 +0900
+    -------+--------------------------+--------------+----------------+----------------+----------------------------
 
 
 status <node>
@@ -68,131 +76,151 @@ Retrieve status of the specified node
 .. code-block:: bash
 
     $ leofs-adm status storage_0@127.0.0.1
-    [config-1: basic]
-    --------------------------------+------------------
-                            version | 1.2.0
-                   number of vnodes | 168
-                      group level-1 |   
-                      group level-2 | 
-                object container(s) | [[{path,"./avs"},{num_of_containers,8}]]
-                            log dir | ./log/erlang
-    --------------------------------+------------------
-
-    [config-2: watchdog]
-    --------------------------------+------------------
-     rex  - watch interval(sec)     | 5
-     rex  - threshold mem capacity  | 33554432
-    --------------------------------+------------------
-     cpu  - watchdog enabled        | disabled
-     cpu  - watch interval(sec)     | 5
-     cpu  - threshold cpu load avg  | 1.5
-     cpu  - threshold cpu util(%)   | 100
-    --------------------------------+------------------
-      io  - watchdog enabled        | disabled
-      io  - watch interval(sec)     | 1
-      io  - threshold input size/s  | 134217728
-      io  - threshold output size/s | 134217728
-    --------------------------------+------------------
-     disk - watchdog enabled        | disabled
-     disk - watch interval(sec)     | 1
-     disk - threshold disk use(%)   | 85
-     disk - threshold disk util(%)  | 95
-    --------------------------------+------------------
-
-    [status-1: ring]
-    --------------------------------+------------------
-                  ring state (cur)  | c8ab8e21
-                  ring state (prev) | c8ab8e21
-    --------------------------------+------------------
-
-    [status-2: erlang-vm]
-    --------------------------------+------------------
-                         vm version | 5.10.4
-                    total mem usage | 36080472
-                   system mem usage | 20999568
-                    procs mem usage | 15126936
-                      ets mem usage | 5031968
-                              procs | 410/1048576
-                        kernel_poll | true
-                   thread_pool_size | 32
-    --------------------------------+------------------
-
-    [status-3: # of msgs]
-    --------------------------------+------------------
-                   replication msgs | 0
-                    vnode-sync msgs | 0
-                     rebalance msgs | 0
-    --------------------------------+------------------
-
+    --------------------------------------+--------------------------------------
+                    Item                  |                 Value
+    --------------------------------------+--------------------------------------
+     Config-1: basic
+    --------------------------------------+--------------------------------------
+                                  version | 1.2.11
+                         number of vnodes | 168
+                        object containers | - path:[./avs], # of containers:8
+                            log directory | ./log/erlang
+    --------------------------------------+--------------------------------------
+     Config-2: watchdog
+    --------------------------------------+--------------------------------------
+     [rex(rpc-proc)]                      |
+                        check interval(s) | 5
+                   threshold mem capacity | 33554432
+    --------------------------------------+--------------------------------------
+     [cpu]                                |
+                         enabled/disabled | disabled
+                        check interval(s) | 5
+                   threshold cpu load avg | 5.0
+                    threshold cpu util(%) | 100
+    --------------------------------------+--------------------------------------
+     [disk]                               |
+                         enabled/disalbed | disabled
+                        check interval(s) | 5
+                    threshold disk use(%) | 100
+                   threshold disk util(%) | 90
+                        threshold rkb(kb) | 131072
+                        threshold wkb(kb) | 131072
+    --------------------------------------+--------------------------------------
+     Config-3: message-queue
+    --------------------------------------+--------------------------------------
+                       number of procs/mq | 8
+            number of batch-procs of msgs | max:1000, regular:400
+       interval between batch-procs (ms)  | max:3000, regular:500
+    --------------------------------------+--------------------------------------
+     Config-4: autonomic operation
+    --------------------------------------+--------------------------------------
+     [auto-compaction]                    |
+                         enabled/disabled | disabled
+            warning active size ratio (%) | 70
+          threshold active size ratio (%) | 60
+                 number of parallel procs | 1
+                            exec interval | 3600
+    --------------------------------------+--------------------------------------
+     Config-5: data-compaction
+    --------------------------------------+--------------------------------------
+      limit of number of compaction procs | 4
+            number of batch-procs of objs | max:500, regular:100
+       interval between batch-procs (ms)  | max:1000, regular:300
+    --------------------------------------+--------------------------------------
+     Status-1: RING hash
+    --------------------------------------+--------------------------------------
+                        current ring hash | 3923d007
+                       previous ring hash | 3923d007
+    --------------------------------------+--------------------------------------
+     Status-2: Erlang VM
+    --------------------------------------+--------------------------------------
+                               vm version | 6.4
+                          total mem usage | 41476672
+                         system mem usage | 23647720
+                          procs mem usage | 17850112
+                            ets mem usage | 5844976
+                                    procs | 364/1048576
+                              kernel_poll | true
+                         thread_pool_size | 32
+    --------------------------------------+--------------------------------------
+     Status-3: Number of messages in MQ
+    --------------------------------------+--------------------------------------
+                     replication messages | 0
+                      vnode-sync messages | 0
+                       rebalance messages | 0
+    --------------------------------------+--------------------------------------
 
     $ leofs-adm status gateway_0@127.0.0.1
-    [config-1: basic]
     -------------------------------+------------------
-     basic
+                 Item              |       Value
     -------------------------------+------------------
-                           version | 1.2.0
+     Config-1: basic
+    --------------------------------------------------
+     [basic]
+    -------------------------------+------------------
+                           version | 1.2.11
                     using protocol | s3
-                           log dir | ./log/erlang
+                     log directory | ./log/erlang
     -------------------------------+------------------
-     http-server-related for REST/S3 API
+     [http server related for rest/s3 api]
     -------------------------------+------------------
                     listening port | 8080
                 listening ssl port | 8443
-                    # of_acceptors | 128
+               number of acceptors | 128
     -------------------------------+------------------
-     cache-related
+     [cache-related]
     -------------------------------+------------------
-           http cache [true|false] | false
-                # of cache_workers | 16
+           http cache [true/false] | false
+           number of cache_workers | 16
                       cache expire | 300
              cache max content len | 1048576
-                ram cache capacity | 268435456
-            disk cache capacity    | 524288000
+                ram cache capacity | 0
+            disk cache capacity    | 0
             disk cache threshold   | 1048576
             disk cache data dir    | ./cache/data
             disk cache journal dir | ./cache/journal
     -------------------------------+------------------
-     large-object-related
+     [large object related]
     -------------------------------+------------------
-               max # of chunk objs | 1000
+          max number of chunk objs | 1000
                chunk object length | 5242880
                  max object length | 5242880000
          reading  chunk obj length | 5242880
          threshold of chunk length | 5767168
     -------------------------------+------------------
-
-    [config-2: watchdog]
+     Config-2: watchdog
     -------------------------------+------------------
-     rex - watch interval(sec)     | 5
-     rex - threshold mem capacity  | 33554432
+     [rex(rpc-proc)]               |
+                 watch interval(s) | 5
+            threshold mem capacity | 33554432
     -------------------------------+------------------
-     cpu - watchdog eanbled        | disabled
-     cpu - watch interval(sec)     | 5
-     cpu - threshold cpu load avg  | 2
-     cpu - threshold cpu util(%)   | 100
+     [cpu]                         |
+                  eanbled/disabled | disabled
+                 check interval(s) | 5
+            threshold cpu load avg | 5.0
+             threshold cpu util(%) | 100
     -------------------------------+------------------
-      io - watchdog enabled        | disabled
-      io - watch interval(sec)     | 5
-      io - threshold input size/s  | 134217728
-      io - threshold output size/s | 134217728
+     [io]                          |
+                  enabled/disabled | disabled
+                 check interval(s) | 1
+            threshold input size/s | 134217728
+           threshold output size/s | 134217728
     -------------------------------+------------------
-
-    [status-1: ring]
+     Status-1: RING hash
     -------------------------------+------------------
-                 ring state (cur)  | c8ab8e21
-                 ring state (prev) | c8ab8e21
+                 current ring hash | 3923d007
+                previous ring hash | 3923d007
     -------------------------------+------------------
-
-    [status-2: erlang-vm]
+     Status-2: Erlang VM
     -------------------------------+------------------
-                        vm version | 5.10.4
-                   total mem usage | 60515880
-                  system mem usage | 45586112
-                   procs mem usage | 14956896
-                     ets mem usage | 5491896
-                             procs | 463/1048576
-                       kernel_poll | true
-                  thread_pool_size | 32
+                        vm version | 6.4
+                   total mem usage | 69980072
+                  system mem usage | 52410432
+                   procs mem usage | 17588560
+                     ets mem usage | 6891272
+                             procs | 439/1048576
+                       kernel poll | true
+                  thread pool size | 32
     -------------------------------+------------------
 
 \
