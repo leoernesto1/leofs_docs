@@ -23,7 +23,7 @@ audio: not([controls]) {
     box-sizing: border-box
 }
 html {
-    font-size: 100%;
+    font-size: 14px;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%
 }
@@ -2970,7 +2970,7 @@ div[class^='highlight'] pre {
     margin: 0;
     padding: 12px 12px;
     font-family: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
-    /* font-size: 12px; */
+    font-size: 12px;
     line-height: 1.5;
     display: block;
     overflow: auto;
