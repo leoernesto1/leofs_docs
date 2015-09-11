@@ -42,6 +42,14 @@ LeoFS aims to provide all of 3-HIGHs as follow:
     * A lower cost than other storage
     * Provide easy management and easy operation
 
+Revision
+^^^^^^^^
+
+* 1.2.14: Sep 11, 2015
+* 1.2.10: Jun 5, 2015
+* 1.2.7: Mar 7, 2015
+* 1.2.0: Nov 10, 2014
+
 
 .. toctree::
    :hidden:

@@ -48,7 +48,8 @@ LeoFS Storage's Cluster Operation
 detach <storage-node>
 ^^^^^^^^^^^^^^^^^^^^^
 
-* Remove the storage node from the storage cluster
+Remove the storage node from the storage cluster
+"""""""""""""""""""""""""""""""""""""""""""""""""
 
 .. code-block:: bash
 
@@ -57,6 +58,102 @@ detach <storage-node>
     $ leofs-adm rebalance
     OK
 
+
+Method of calcellation of detach-operation
+"""""""""""""""""""""""""""""""""""""""""""
+
+.. code-block:: bash
+
+    $ leofs-adm detach storage_0@127.0.0.1
+    OK
+    ### Rollback this operation
+    $ leofs-adm rollback storage_0@127.0.0.1
+    OK
+
+Method of deletion of an attached node
+"""""""""""""""""""""""""""""""""""""""
+
+.. code-block:: bash
+
+    ## Confirm current status of ther storage cluster
+    $ leofs-adm status
+     [System Confiuration]
+    -----------------------------------+----------
+     Item                              | Value
+    -----------------------------------+----------
+     Basic/Consistency level
+    -----------------------------------+----------
+                        system version | 1.2.12
+                            cluster Id | leofs_1
+                                 DC Id | dc_1
+                        Total replicas | 2
+              number of successes of R | 1
+              number of successes of W | 1
+              number of successes of D | 1
+     number of rack-awareness replicas | 0
+                             ring size | 2^128
+    -----------------------------------+----------
+     Multi DC replication settings
+    -----------------------------------+----------
+            max number of joinable DCs | 2
+               number of replicas a DC | 1
+    -----------------------------------+----------
+     Manager RING hash
+    -----------------------------------+----------
+                     current ring-hash | 0364701d
+                    previous ring-hash | 0364701d
+    -----------------------------------+----------
+
+     [State of Node(s)]
+    -------+--------------------------+--------------+----------------+----------------+----------------------------
+     type  |           node           |    state     |  current ring  |   prev ring    |          updated at
+    -------+--------------------------+--------------+----------------+----------------+----------------------------
+      S    | storage_0@127.0.0.1      | attached     |                |                | 2015-09-09 11:17:49 +0900
+      S    | storage_1@127.0.0.1      | running      | 0364701d       | 0364701d       | 2015-09-09 11:13:31 +0900
+      S    | storage_2@127.0.0.1      | running      | 0364701d       | 0364701d       | 2015-09-09 11:09:15 +0900
+      G    | gateway_0@127.0.0.1      | running      | 0364701d       | 0364701d       | 2015-09-09 10:53:19 +0900
+    -------+--------------------------+--------------+----------------+----------------+----------------------------
+
+    ## Remove an attached node
+    $ leofs-adm detach storage_0@127.0.0.1
+    OK
+
+    ## Confirm the current status of the storage cluster, again
+    $ leofs-adm status
+     [System Confiuration]
+    -----------------------------------+----------
+     Item                              | Value
+    -----------------------------------+----------
+     Basic/Consistency level
+    -----------------------------------+----------
+                        system version | 1.2.12
+                            cluster Id | leofs_1
+                                 DC Id | dc_1
+                        Total replicas | 2
+              number of successes of R | 1
+              number of successes of W | 1
+              number of successes of D | 1
+     number of rack-awareness replicas | 0
+                             ring size | 2^128
+    -----------------------------------+----------
+     Multi DC replication settings
+    -----------------------------------+----------
+            max number of joinable DCs | 2
+               number of replicas a DC | 1
+    -----------------------------------+----------
+     Manager RING hash
+    -----------------------------------+----------
+                     current ring-hash | 0364701d
+                    previous ring-hash | 0364701d
+    -----------------------------------+----------
+
+     [State of Node(s)]
+    -------+--------------------------+--------------+----------------+----------------+----------------------------
+     type  |           node           |    state     |  current ring  |   prev ring    |          updated at
+    -------+--------------------------+--------------+----------------+----------------+----------------------------
+      S    | storage_1@127.0.0.1      | running      | 0364701d       | 0364701d       | 2015-09-09 11:13:31 +0900
+      S    | storage_2@127.0.0.1      | running      | 0364701d       | 0364701d       | 2015-09-09 11:09:15 +0900
+      G    | gateway_0@127.0.0.1      | running      | 0364701d       | 0364701d       | 2015-09-09 10:53:19 +0900
 
 .. index::
     pair: Storage operation; suspend-command
