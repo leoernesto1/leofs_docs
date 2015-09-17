@@ -59,7 +59,7 @@ Remove the storage node from the storage cluster
     OK
 
 
-Method of calcellation of detach-operation
+Method of cancellation of detach-operation
 """""""""""""""""""""""""""""""""""""""""""
 
 .. code-block:: bash
