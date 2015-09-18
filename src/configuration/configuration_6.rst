@@ -54,7 +54,8 @@ Configuration
 - Modify |leo_gateway_conf|
 
  -  Set ``protocol`` to ``nfs``
- -  Set ``large_object.chunked_obj_len`` to ``1048576``
+ -  Set ``large_object.chunked_obj_len`` to ``1048576`` (ubuntu) / ``65536`` (FreeBSD)
+ -  Set ``large_object.threshold_of_chunk_len`` to ``1048576`` (ubuntu) / ``65536`` (FreeBSD)
 
 .. note:: If you also want to access LeoFS via S3 intereface, you need to start another LeoFS Gateway with setting ``protocol`` to s3.
 
@@ -65,6 +66,9 @@ Configuration
 
     ## Length of a chunked object
     large_object.chunked_obj_len = 1048576
+
+    ## Threshold of length of a chunked object
+    large_object.threshold_of_chunk_len = 1048576
 
 Start LeoFS as NFS Server with other dependent programs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -94,7 +98,10 @@ Start LeoFS as NFS Server with other dependent programs
 .. code-block:: bash
 
     $ sudo mkdir /mnt/leofs
+    ## for Linux
     $ sudo mount -t nfs -o nolock 127.0.0.1:/test /mnt/leofs
+    ## for FreeBSD
+    $ sudo mount -t nfs -o nolockd 127.0.0.1:/test /mnt/leofs
 
 Now you can operate the bucket test in LeoFS as a filesystem via ``/mnt/leofs``.
 
