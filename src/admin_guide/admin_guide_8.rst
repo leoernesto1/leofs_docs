@@ -54,8 +54,9 @@ S3-API Commands
 |                                                                                      |      * ``public-read-write`` : All users have READ and WRITE access                                  |
 +--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
 | leofs-adm :ref:`set-redundancy-method <set-redundancy-method>`                       | * ``v1.4.0-`` Set redundancy method of the bucket                                                    |
-| <bucket> <access-key-id> (copy | erasure-code)                                       | * erasure-code:                                                                                      |
-| [<number-of-data-chunks>] [<number-of-conding-chunks>]                               |      * number-of-data-chunks: The number of chunks in which the original object is divided           |
+| <bucket> <access-key-id> (copy | erasure-code)                                       | * Both ``object copy`` and ``erasure code`` are supported                                            |
+| [<number-of-data-chunks>] [<number-of-conding-chunks>]                               | * erasure-code:                                                                                      |
+|                                                                                      |      * number-of-data-chunks: The number of chunks in which the original object is divided           |
 |                                                                                      |      * number-of-coding-chunks: The number of additional chunks computed by the functions            |
 +--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
 
