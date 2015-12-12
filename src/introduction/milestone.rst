@@ -7,29 +7,28 @@
 Milestones
 ==========
 
-v1.2 (Nov, 2014 - June 2015)
+v1.2 (Nov, 2014 - Dec 2015)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* NFS Support (Beta-1)
+* NFS v3 Support (Beta)
 * Watchdog
 * Auto-compaction
 
 v1.4 (July, 2015 -)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* NFS Support (Beta-2)
-* Improve performance of the list objects
-* Improve Web GUI Console (Option)
-* Improve compatibility S3-APIs#6
+* NFS v3 Support (Production)
+* Erasure coding support
+* Improve compatibility S3-APIs
 * Objects Expiration into the bucket
 * Versioning
 
-v2.0 (Mar, 2016)
+v2.0 (Sept, 2016)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* NFS Support (for Production)
+* NFS v4 Support
+* Layered storage
+* Data deduplication
 * QoS Support (Option)
-* Erasure Coding
-* Improve compatibility S3-APIs#7
 
-*Published at 2nd July, 2015*
+*Published at December 12, 2015*
 
 
 .. |leo_center| raw:: html
