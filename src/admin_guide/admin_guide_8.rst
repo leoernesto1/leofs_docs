@@ -53,6 +53,12 @@ S3-API Commands
 |                                                                                      |      * ``public-read``       : All users have READ access                                            |
 |                                                                                      |      * ``public-read-write`` : All users have READ and WRITE access                                  |
 +--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| leofs-adm :ref:`set-redundancy-method <set-redundancy-method>`                       | * ``v1.4.0-`` Set redundancy method of the bucket                                                    |
+| <bucket> <access-key-id> (copy | erasure-code)                                       | * erasure-code:                                                                                      |
+| [<number-of-data-chunks>] [<number-of-conding-chunks>]                               |      * number-of-data-chunks: The number of chunks in which the original object is divided           |
+|                                                                                      |      * number-of-coding-chunks: The number of additional chunks computed by the functions            |
++--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+
 
 
 S3-API Commands - User
@@ -336,6 +342,46 @@ update-acl <bucket> <access-key-id>
     ok
 
 \
+
+
+.. ### SET REDUNDANCY METHOD ###
+.. _set-redundancy-method:
+
+.. index::
+        pair: S3-API commands; set-redundancy-method-command
+
+set-redundancy-method <bucket> <access-key-id> (copy | erasure-code) [<number-of-data-chunks>] [<number-of-conding-chunks>]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Set redundancy method of the bucket
+    * Erasure code
+        * number-of-data-chunks: The number of chunks in which the original object is divided
+        * number-of-coding-chunks: The number of additional chunks computed by leo_erasure's encoding functions
+        * Examples:
+            * **RAID 5**: ``number-of-data-chunks`` = 2, ``number-of-coding-chunks`` = 1
+            * **RAID 6**: ``number-of-data-chunks`` = 2, ``number-of-coding-chunks`` = 2
+            * **Custom params.1**: ``number-of-data-chunks`` = 4, ``number-of-coding-chunks`` = 2
+            * **Custom params.2**: ``number-of-data-chunks`` = 8, ``number-of-coding-chunks`` = 3
+            * **Custom params.3**: ``number-of-data-chunks`` = 10, ``number-of-coding-chunks`` = 4
+
+.. code-block:: bash
+
+    $ leofs-adm set-redundancy-method test 05236 erasure-code 8 3
+    OK
+
+    $ leofs-adm get-buckets
+    cluster id   | bucket   | owner       | permissions      | redundancy method            | created at
+    -------------+----------+-------------+------------------+------------------------------+---------------------------
+    leofs_1      | test     | _test_leofs | Me(full_control) | erasure_code, {k:8, m:3}     | 2015-12-13 00:14:10 +0000
+
+    $ leofs-adm set-redundancy-method test 05236 copy
+    OK
+
+    $ leofs-adm get-buckets
+    cluster id   | bucket   | owner       | permissions      | redundancy method            | created at
+    -------------+----------+-------------+------------------+------------------------------+---------------------------
+    leofs_1      | test     | _test_leofs | Me(full_control) | copy, {n:3, w:2, r:1, d:2}   | 2015-12-13 00:14:10 +0000
+
 
 
 Canned ACL

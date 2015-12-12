@@ -138,6 +138,11 @@ leofs-adm Command Line
 |                                                                                      |      * ``public-read``       : All users have READ access                                            |
 |                                                                                      |      * ``public-read-write`` : All users have READ and WRITE access                                  |
 +--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| leofs-adm :ref:`set-redundancy-method <set-redundancy-method>`                       | * ``v1.4.0-`` Set redundancy method of the bucket                                                    |
+| <bucket> <access-key-id> (copy | erasure-code)                                       | * erasure-code:                                                                                      |
+| [<number-of-data-chunks>] [<number-of-conding-chunks>]                               |      * number-of-data-chunks: The number of chunks in which the original object is divided           |
+|                                                                                      |      * number-of-coding-chunks: The number of additional chunks computed by the functions            |
++--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
 | **Multi Data Center Operation**                                                                                                                                                             |
 +--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
 | leofs-adm :ref:`join-cluster <join-cluster>` <manager-master> <manager-slave>        | ``1.0.0-`` Begin to communicate between the local cluster and the remote cluster                     |
