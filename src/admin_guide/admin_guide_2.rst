@@ -289,7 +289,7 @@ You're able to check a redundancy method of an object with the ``redundancy meth
     ------+---------------------+----------------------------------+-------+------------+----------------------------------+----------------+----------------+----------------+----------------------------
      del? |           node      |             ring address         | size  | checksum   |        redundancy method         |  has children  |  total chunks  |     clock      |             when
     ------+---------------------+----------------------------------+-------+------------+----------------------------------+----------------+----------------+----------------+----------------------------
-          | storage_0@127.0.0.1 | d552cfef6fa3ccc0bd55de509475754b | 2358K | d7685fa58b | erasure_code, {k:10, m:4, vandrs}| false          |             14 | 527ec4caed51c  | 2015-12-28 11:45:35 +0900
-          | storage_1@127.0.0.1 | d552cfef6fa3ccc0bd55de509475754b | 2358K | d7685fa58b | erasure_code, {k:10, m:4, vandrs}| false          |             14 | 527ec4caed51c  | 2015-12-28 11:45:35 +0900
+          | storage_0@127.0.0.1 | d552cfef6fa3ccc0bd55de509475754b | 2358K | d7685fa58b | erasure_code, {k:10, m:4, isars} | false          |             14 | 527ec4caed51c  | 2015-12-28 11:45:35 +0900
+          | storage_1@127.0.0.1 | d552cfef6fa3ccc0bd55de509475754b | 2358K | d7685fa58b | erasure_code, {k:10, m:4, isars} | false          |             14 | 527ec4caed51c  | 2015-12-28 11:45:35 +0900
 
 \
