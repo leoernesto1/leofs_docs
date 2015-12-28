@@ -59,7 +59,7 @@ LeoFS delivers two configuration items for the erasure coding support. You're ab
 Leo's Erasure Code Library
 --------------------------
 
-|leo_erasure| is a Erlang binding for the open sourced Erasure Coding library **JErasure** and **Intel's ersure code lib - ISA-L**.
+|leo_erasure| is a Erlang binding for the open sourced Erasure Coding library **JErasure** and **Intel's erasure code lib - ISA-L**.
 
 
 .. |leo_erasure| raw:: html
