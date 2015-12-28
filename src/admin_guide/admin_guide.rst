@@ -27,3 +27,4 @@ We explain core administrative tasks and practices that operators of LeoFS will 
    admin_guide_9
    admin_guide_10
    admin_guide_11
+   admin_guide_12
