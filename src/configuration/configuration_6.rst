@@ -1,6 +1,6 @@
 .. =========================================================
 .. LeoFS documentation
-.. Copyright (c) 2012-2015 Rakuten, Inc.
+.. Copyright (c) 2012-2016 Rakuten, Inc.
 .. http://leo-project.net/
 .. =========================================================
 
@@ -81,7 +81,7 @@ Start LeoFS as NFS Server with other dependent programs
 
     $ sudo service rpcbind start
 
-- Create a bucket for NFS with ``leofs-adm``
+- Create a bucket and a token for NFS with ``leofs-adm``
 
 .. code-block:: bash
 
@@ -92,16 +92,19 @@ Start LeoFS as NFS Server with other dependent programs
     -------------+----------+-------------+------------------+---------------------------
     leofs_1      | test     | _test_leofs | Me(full_control) | 2014-07-31 10:20:42 +0900
 
+    $ ./leofs-adm gen-nfs-mnt-key test 05236 127.0.0.1
+    bb5034f0c740148a346ed663ca0cf5157efb439f
+
 
 - Create a mount point and Mount
 
 .. code-block:: bash
 
     $ sudo mkdir /mnt/leofs
-    ## for Linux
-    $ sudo mount -t nfs -o nolock 127.0.0.1:/test /mnt/leofs
-    ## for FreeBSD
-    $ sudo mount -t nfs -o nolockd 127.0.0.1:/test /mnt/leofs
+    ## for Linux - "sudo mount -t nfs -o nolock <host>:/<bucket>/<token> <dir>"
+    $ sudo mount -t nfs -o nolock 127.0.0.1:/test/05236/bb5034f0c740148a346ed663ca0cf5157efb439f /mnt/leofs
+    ## for FreeBSD - "sudo mount -t nfs -o nolockd <host>:/<bucket>/<token> <dir>"
+    $ sudo mount -t nfs -o nolockd 127.0.0.1:/test/05236/bb5034f0c740148a346ed663ca0cf5157efb439f /mnt/leofs
 
 Now you can operate the bucket test in LeoFS as a filesystem via ``/mnt/leofs``.
 
@@ -201,26 +204,6 @@ Confirm that NFS works
     /mnt/leofs/1/2/3:
     drwxrwxrwx 0 root root 4096 Jul 31 19:37 2014 .
     drwxrwxrwx 0 root root 4096 Jul 31 19:37 2014 ..
-
-- Create a very large file
-
-.. code-block:: bash
-
-    # Create a 50M file
-    $ dd if=/dev/urandom of=/mnt/leofs/1/2/3/largefile bs=1048576 count=50
-    $ ls -alR /mnt/leofs/1
-
-    drwxrwxrwx 0 root root     4096 Jul 31 19:42 2014 .
-    drwxrwxrwx 0 root root     4096 Jul 31 19:42 2014 ..
-    -rw-rw-rw- 0 root root 52428800 Jul 31 10:42 2014 largefile
-
-.. code-block:: bash
-
-    $ ./leofs-adm whereis test/1/2/3/largefile
-    -------+--------------------------+--------------------------------------+------------+--------------+----------------+----------------+----------------------------
-     del?  |           node           |             ring address             |    size    |   checksum   |  # of chunks   |     clock      |             when
-    -------+--------------------------+--------------------------------------+------------+--------------+----------------+----------------+----------------------------
-           | storage_0@127.0.0.1      | b7992d2fac981fbd98230a124ac78506     |     51200K |   d41d8cd98f |             10 | 4ffe2f44badd2  | 2014-07-31 10:42:53 +0900
 
 
 - Remove files recursively
