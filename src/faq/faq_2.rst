@@ -54,7 +54,7 @@ NFS Support
 
 * NFS implemantation with LeoFS v1.1 is a subset of |NFSv3|. Lock manager protocol, ``Authentication``, and ``Owner/Permission`` management are NOT covered.
 * The `ls` command may take too much time when the target directory have lots of child. We're planning to provide better performance with LeoFS v.1.4.
-* If you use LeoFS with NFS, you should set the size of a chunked object in LeoFS to 1MB (1048576Bytes), otherwise the efficiency of disk utilization can be decreased.
+* If you use LeoFS with NFS, you should set the size of a chunked object in LeoFS to 1MB (1048576Bytes) - ``large_object.chunked_obj_len = 1048576`` *(leo_gateway.conf)*, otherwise the efficiency of disk utilization can be decreased.
 * What are the requirements to run LeoFS with NFS?
 
   * LeoFS Gateway(NFS Server)
