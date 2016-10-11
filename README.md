@@ -1,11 +1,8 @@
-leofs_docs
-==========
+# LeoFS Documentation
+## Overview
 
-Overview
---------
-
-LeoFS uses [Sphinx](http://sphinx.pocoo.org/) for its documentation.
-It can be consulted directly from the [LeoFS website](http://www.leofs.org/docs/).
+LeoFS Documentation depends on [Sphinx](http://sphinx.pocoo.org/).
+It can be consulted directly from the [LeoFS website](http://leo-project.net/leofs/docs/index.html).
 
 The following commands can be used to download the documentation and
 generate the HTML files:
@@ -17,3 +14,7 @@ $ sudo easy_install sphinxcontrib-erlangdomain
 
 $ make html
 ```
+
+## Sponsors
+
+LeoProject/LeoFS is sponsored by [Rakuten, Inc.](http://global.rakuten.com/corp/) and supported by [Rakuten Institute of Technology](http://rit.rakuten.co.jp/).
