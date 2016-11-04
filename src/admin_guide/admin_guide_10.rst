@@ -11,14 +11,14 @@ System Maintenance
 ==================
 
 .. index::
-    pair: System maintenance; Upgrade old version to 1.2.10
+    pair: System maintenance; Upgrade old version to 1.3.1
 
 \
 
-Upgrade your old version LeoFS to v1.2.10
+Upgrade your old version LeoFS to v1.3.1
 -----------------------------------------
 
-This section describes the way of replacement of old LeoFS to v1.2.10
+This section describes the way of replacement of old LeoFS to v1.3.1
 
 Upgrade flow diagram
 ^^^^^^^^^^^^^^^^^^^^
@@ -457,4 +457,3 @@ See also
 .. |the mq-stats-command| raw:: html
 
    <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_3.html#mq-stats-command" target="_blank">the mq-stats-command</a>
-
