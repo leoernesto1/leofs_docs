@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. _dragondisk-label:
@@ -11,7 +11,7 @@ Connect to LeoFS using DragonDisk
 
 .. note:: LeoFS' domains are ruled by :ref:`this rule <s3-path-label>`.
 
-`DragonDisk <http://www.dragondisk.com/>`_ is a powerful file manager for Amazon S3 Compatible Storage.
+`DragonDisk <https://www.dragondisk.com/>`_ is a powerful file manager for Amazon S3 Compatible Storage.
 
 Setting up LeoFS account details
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

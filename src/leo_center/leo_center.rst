@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. index::
@@ -26,7 +26,7 @@ Install LeoCenter
 
 * **LeoCenter's Repository**: https://github.com/leo-project/leo_center
 * **Ruby 2.0** OR higher
-    * Download URL: http://www.ruby-lang.org/en/downloads/
+    * Download URL: https://www.ruby-lang.org/en/downloads/
 
 ::
 

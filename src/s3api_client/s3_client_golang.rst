@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. _aws-sdk-golang-label:
@@ -12,7 +12,7 @@ Getting Started with Go
 |goamz|
 ^^^^^^^
 
-|goamz| is one of |golang| packages to interact with the `Amazon Web Service <http://aws.amazon.com/>`_ .
+|goamz| is one of |golang| packages to interact with the `Amazon Web Service <https://aws.amazon.com/>`_ .
 
 Install |goamz|
 ^^^^^^^^^^^^^^^^

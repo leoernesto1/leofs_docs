@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. index::
@@ -81,4 +81,4 @@ See the current state of cluster(s)
 
 .. |config_mdc| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/configuration/configuration_5.html" target="_blank">Configuration/Multi data center replication</a>
+   <a href="https://leo-project.net/leofs/docs/configuration/configuration_5.html" target="_blank">Configuration/Multi data center replication</a>

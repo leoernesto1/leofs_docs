@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. _s3fs-c-label:
@@ -60,5 +60,5 @@ Mount "LeoFS"
 
 .. code-block:: bash
 
-    $ s3fs <bucket> <mount-point> -o url='http://<endpoint>:<port>'
+    $ s3fs <bucket> <mount-point> -o url='https://<endpoint>:<port>'
 

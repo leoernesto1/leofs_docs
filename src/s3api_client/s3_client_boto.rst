@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. _boto-label:
@@ -11,7 +11,7 @@ Getting Started with Python
 
 * Boto is a Python interface to Amazon Web Services. You can use it for LeoFS too.
     * `Repository <https://github.com/boto/boto>`_
-    * `Documentation <http://docs.pythonboto.org/en/latest/index.html>`_
+    * `Documentation <https://docs.pythonboto.org/en/latest/index.html>`_
 
 Install "boto"
 ^^^^^^^^^^^^^^

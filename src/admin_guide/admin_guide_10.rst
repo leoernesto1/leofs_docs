@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. index::
@@ -28,7 +28,7 @@ Upgrade flow diagram
 .. image:: ../../_static/images/leofs-upgrade-flow-diagram.jpg
    :width: 780px
 
-* `The diagram only <http://www.leofs.org/docs/_images/leofs-upgrade-flow-diagram.jpg>`_
+* `The diagram only <http://leo-project.net/leofs/docs/_images/leofs-flow-diagram.jpg>`_
 
 \
 
@@ -440,20 +440,20 @@ See also
 
 .. |the suspend-command| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_3.html#suspend-command" target="_blank">the suspend-command</a>
+   <a href="https://leo-project.net/leofs/docs/admin_guide/admin_guide_3.html#suspend-command" target="_blank">the suspend-command</a>
 
 .. |the status-command| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_2.html#status-command" target="_blank">the status-command</a>
+   <a href="https://leo-project.net/leofs/docs/admin_guide/admin_guide_2.html#status-command" target="_blank">the status-command</a>
 
 .. |the resume-command| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_3.html#resume-command" target="_blank">the resume-command</a>
+   <a href="https://leo-project.net/leofs/docs/admin_guide/admin_guide_3.html#resume-command" target="_blank">the resume-command</a>
 
 .. |the recover-node-command| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_4.html#recover-node-command" target="_blank">the recover-node-command</a>
+   <a href="https://leo-project.net/leofs/docs/admin_guide/admin_guide_4.html#recover-node-command" target="_blank">the recover-node-command</a>
 
 .. |the mq-stats-command| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_3.html#mq-stats-command" target="_blank">the mq-stats-command</a>
+   <a href="https://leo-project.net/leofs/docs/admin_guide/admin_guide_3.html#mq-stats-command" target="_blank">the mq-stats-command</a>

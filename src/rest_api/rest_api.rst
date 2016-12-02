@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 REST API
@@ -43,7 +43,7 @@ Description of LeoFS' behavior for each HTTP verb
 URL format
 ^^^^^^^^^^
 
-* URL format: http://${HOST}:8080/**<file-path>**
+* URL format: https://${HOST}:8080/**<file-path>**
     * LeoFS will only use the ``<file-path>`` part of the URL to identify objects
     * You can check that an object exists in the cluster by using:
 
@@ -63,16 +63,16 @@ POST/PUT
 ::
 
     $ curl -X POST -H "Content-Type:image/png" \
-              --data-binary @test.jpg http://hostname:8080/_test/_image/file.png
+              --data-binary @test.jpg https://hostname:8080/_test/_image/file.png
 
     $ curl -X PUT -H "Content-Type:image/png" \
-              --data-binary @test.jpg http://hostname:8080/_test/_image/file.png
+              --data-binary @test.jpg https://hostname:8080/_test/_image/file.png
 
 GET
 
 ::
 
-    $ curl -X GET http://hostname:8080/_test/_image/file.png
+    $ curl -X GET https://hostname:8080/_test/_image/file.png
       % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                      Dload  Upload   Total   Spent    Left  Speed
     100 6019k    0 6019k    0     0   210M      0 --:--:-- --:--:-- --:--:--  217M
@@ -81,5 +81,5 @@ DELETE
 
 ::
 
-    $ curl -X DELETE http://hostname:8080/_test/_image/file.png
+    $ curl -X DELETE https://hostname:8080/_test/_image/file.png
 

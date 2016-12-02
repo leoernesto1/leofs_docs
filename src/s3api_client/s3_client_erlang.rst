@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. _erlcloud-label:
@@ -36,7 +36,7 @@ Example usage
                          "?YOUR_SECRET_ACCESS_KEY",
                          "localhost",
                          8080),
-  Conf_2 = Conf_1#aws_config{s3_scheme = "http://"},
+  Conf_2 = Conf_1#aws_config{s3_scheme = "https://"},
 
   Bucket = "erlang",
   Key = "test-key",

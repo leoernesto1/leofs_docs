@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 Architecture
@@ -30,4 +30,4 @@ Also, what we carefully desined LeoFS is 3 things:
 
 .. |gui_console| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/leo_center/leo_center.html" target="_blank">GUI console</a>
+   <a href="https://leo-project.net/leofs/docs/leo_center/leo_center.html" target="_blank">GUI console</a>

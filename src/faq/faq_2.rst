@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. index::
@@ -75,19 +75,19 @@ See Also:
 
 .. |AmazonS3API| raw:: html
 
-   <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/APIRest.html" target="_blank">Amazon S3 REST API</a>
+   <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/APIRest.html" target="_blank">Amazon S3 REST API</a>
 
 .. |MultiPartUploadAPI| raw:: html
 
-   <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html" target="_blank">Amazon S3 multipart upload API</a>
+   <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html" target="_blank">Amazon S3 multipart upload API</a>
 
 .. |KVS| raw:: html
 
-   <a href="http://en.wikipedia.org/wiki/Key/value_store#Key.E2.80.93Value_or_KV_stores" target="_blank">KVS</a>
+   <a href="https://en.wikipedia.org/wiki/Key/value_store#Key.E2.80.93Value_or_KV_stores" target="_blank">KVS</a>
 
 .. |NFSv3| raw:: html
 
-   <a href="http://www.ietf.org/rfc/rfc1813.txt" target="_blank">NFS v3</a>
+   <a href="https://www.ietf.org/rfc/rfc1813.txt" target="_blank">NFS v3</a>
 
 .. |ISSUE_198| raw:: html
 
@@ -111,23 +111,23 @@ See Also:
 
 .. |NFS_LOCK_MANAGER_PROTO| raw:: html
 
-   <a href="http://tools.ietf.org/html/rfc1813#page-114" target="_blank">NFS Lock Manager Protocol</a>
+   <a href="https://tools.ietf.org/html/rfc1813#page-114" target="_blank">NFS Lock Manager Protocol</a>
 
 .. |s3_api_interface| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/s3api_interface/s3_api.html" target="_blank">Amazon S3 API and Interface</a>
+   <a href="https://leo-project.net/leofs/docs/s3api_interface/s3_api.html" target="_blank">Amazon S3 API and Interface</a>
 
 .. |configuration_2| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/configuration/configuration_2.html" target="_blank">Configuration of LeoFS Storage</a>
+   <a href="https://leo-project.net/leofs/docs/configuration/configuration_2.html" target="_blank">Configuration of LeoFS Storage</a>
 
 .. |configuration_3| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/configuration/configuration_3.html" target="_blank">Configuration of Gateway nodes</a>
+   <a href="https://leo-project.net/leofs/docs/configuration/configuration_3.html" target="_blank">Configuration of Gateway nodes</a>
 
 .. |admin_guide_10| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_10.html" target="_blank">Upgrade your old version LeoFS to v1.2.7</a>
+   <a href="https://leo-project.net/leofs/docs/admin_guide/admin_guide_10.html" target="_blank">Upgrade your old version LeoFS to v1.2.7</a>
 
 .. |ISSUE_338| raw:: html
 

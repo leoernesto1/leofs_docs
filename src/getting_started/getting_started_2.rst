@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. _quick-start2-label:
@@ -90,7 +90,7 @@ Configuration - Consistency level
     ## --------------------------------------------------------------------
     ## MANAGER - Consistency Level
     ##     * Only set its configurations to **Manager-master**
-    ##     * See: http://www.leofs.org/docs/configuration.html#the-consistency-level
+    ##     * See: http://leo-project.net/leofs/docs/configuration/configuration_1.html
     ## --------------------------------------------------------------------
     ## A number of replicas
     consistency.num_of_replicas = 2
@@ -215,7 +215,7 @@ Using LeoFS
 
 .. code-block:: bash
 
-    $ curl http://localhost:8080/your_bucket_name/path/to/file
+    $ curl https://localhost:8080/your_bucket_name/path/to/file
     > {CONTENTS}
 
 .. note:: From version 0.16.0, you need to set ACL settings of your bucket to ``public-read`` by using the command :ref:`update-acl<update-acl>` if you want to get the data stored in LeoFS via web browser.

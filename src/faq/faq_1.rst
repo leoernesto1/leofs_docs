@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. index::
@@ -164,23 +164,23 @@ LeoFS clients exist for all of the most popular programming languages as S3-API 
 
 .. |LeoFS| raw:: html
 
-   <a href="http://leo-project.net/leofs/" target="_blank">LeoFS</a>
+   <a href="https://leo-project.net/leofs/" target="_blank">LeoFS</a>
 
 .. |object_storage| raw:: html
 
-   <a href="http://en.wikipedia.org/wiki/Object_storage" target="_blank">object storage</a>
+   <a href="https://en.wikipedia.org/wiki/Object_storage" target="_blank">object storage</a>
 
 .. |ConsistentHashing| raw:: html
 
-   <a href="http://en.wikipedia.org/wiki/Consistent_hashing" target="_blank">Consistent hashing</a>
+   <a href="https://en.wikipedia.org/wiki/Consistent_hashing" target="_blank">Consistent hashing</a>
 
 .. |LeoFS_Slide| raw:: html
 
-   <a href="http://www.slideshare.net/rakutentech/scaling-and-high-performance-storage-system-leofs" target="_blank">Slide - Scaling and High Performance Storage System: LeoFS</a>
+   <a href="https://www.slideshare.net/rakutentech/scaling-and-high-performance-storage-system-leofs" target="_blank">Slide - Scaling and High Performance Storage System: LeoFS</a>
 
 .. |SPOF| raw:: html
 
-   <a href="http://en.wikipedia.org/wiki/Single_point_of_failure" target="_blank">SPOF - Single Point Of Failure</a>
+   <a href="https://en.wikipedia.org/wiki/Single_point_of_failure" target="_blank">SPOF - Single Point Of Failure</a>
 
 .. |GitHub| raw:: html
 
@@ -192,29 +192,29 @@ LeoFS clients exist for all of the most popular programming languages as S3-API 
 
 .. |LeoCenterDocs| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/leo_center/leo_center.html" target="_blank">LeoCenter on GitHub</a>
+   <a href="https://leo-project.net/leofs/docs/leo_center/leo_center.html" target="_blank">LeoCenter on GitHub</a>
 
 .. |Erlang| raw:: html
 
-   <a href="http://www.erlang.org/" target="_blank">Erlang</a>
+   <a href="https://www.erlang.org/" target="_blank">Erlang</a>
 
 .. |leo_gateway_detail| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/architecture/leofs-gateway-detail.html" target="_blank">LeoFS Gateway</a>
+   <a href="https://leo-project.net/leofs/docs/architecture/leofs-gateway-detail.html" target="_blank">LeoFS Gateway</a>
 
 .. |leo_storage_detail| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/architecture/leofs-storage-detail.html" target="_blank">LeoFS Storage</a>
+   <a href="https://leo-project.net/leofs/docs/architecture/leofs-storage-detail.html" target="_blank">LeoFS Storage</a>
 
 .. |leo_manager_detail| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/architecture/leofs-manager-detail.html" target="_blank">LeoFS Manager</a>
+   <a href="https://leo-project.net/leofs/docs/architecture/leofs-manager-detail.html" target="_blank">LeoFS Manager</a>
 
 .. |leo_milestone| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/faq/faq_1.html#is-there-the-roadmap-of-leofs" target="_blank">LeoFS Manager</a>
+   <a href="https://leo-project.net/leofs/docs/faq/faq_1.html#is-there-the-roadmap-of-leofs" target="_blank">LeoFS Manager</a>
 
 .. |s3_client_list| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/s3api_client/s3_client.html" target="_blank">details</a>
+   <a href="https://leo-project.net/leofs/docs/s3api_client/s3_client.html" target="_blank">details</a>
 

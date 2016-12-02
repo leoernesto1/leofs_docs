@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. _watchdog-label:
@@ -144,11 +144,11 @@ See Also
 
 .. |iostat-command| raw:: html
 
-   <a href="http://en.wikipedia.org/wiki/Iostat" target="_blank">iostat command</a>
+   <a href="https://en.wikipedia.org/wiki/Iostat" target="_blank">iostat command</a>
 
 .. |df-command| raw:: html
 
-   <a href="http://en.wikipedia.org/wiki/Df_%28Unix%29" target="_blank">df command</a>
+   <a href="https://en.wikipedia.org/wiki/Df_%28Unix%29" target="_blank">df command</a>
 
 .. |leo_gateway_conf| raw:: html
 

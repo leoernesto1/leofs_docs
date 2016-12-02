@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 Introduction
@@ -36,12 +36,12 @@ LeoFS consists of 3 applications - |leo_storage_detail|, |leo_gateway_detail| an
 
 .. |leo_gateway_detail| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/architecture/leofs-gateway-detail.html" target="_blank">LeoFS Gateway</a>
+   <a href="https://leo-project.net/leofs/docs/architecture/leofs-gateway-detail.html" target="_blank">LeoFS Gateway</a>
 
 .. |leo_storage_detail| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/architecture/leofs-storage-detail.html" target="_blank">LeoFS Storage</a>
+   <a href="https://leo-project.net/leofs/docs/architecture/leofs-storage-detail.html" target="_blank">LeoFS Storage</a>
 
 .. |leo_manager_detail| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/architecture/leofs-manager-detail.html" target="_blank">LeoFS Manager</a>
+   <a href="https://leo-project.net/leofs/docs/architecture/leofs-manager-detail.html" target="_blank">LeoFS Manager</a>

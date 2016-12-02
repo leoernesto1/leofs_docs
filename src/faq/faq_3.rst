@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. index::
@@ -194,23 +194,23 @@ See also:
 
 .. |leofs-website| raw:: html
 
-   <a href="http://leo-project.net/leofs/download.html" target="_blank">LeoFS download page</a>
+   <a href="https://leo-project.net/leofs/download.html" target="_blank">LeoFS download page</a>
 
 .. |fresh-ports| raw:: html
 
-   <a href="http://www.freshports.org/databases/leofs" target="_blank">Fresh ports/database</a>
+   <a href="https://www.freshports.org/databases/leofs" target="_blank">Fresh ports/database</a>
 
 .. |smartos-package| raw:: html
 
-   <a href="http://release.project-fifo.net/pkg/rel/" target="_blank">LeoFS packages for SmartOS</a>
+   <a href="https://release.project-fifo.net/pkg/rel/" target="_blank">LeoFS packages for SmartOS</a>
 
 .. |project-fifo| raw:: html
 
-   <a href="http://project-fifo.net" target="_blank">Project FiFo</a>
+   <a href="https://project-fifo.net" target="_blank">Project FiFo</a>
 
 .. |erlang-p| raw:: html
 
-   <a href="http://erlang.org/doc/man/erl.html#+P" target="_blank">Erlang - +P</a>
+   <a href="https://erlang.org/doc/man/erl.html#+P" target="_blank">Erlang - +P</a>
 
 .. |b2l| raw:: html
 
@@ -218,11 +218,11 @@ See also:
 
 .. |erl_nif| raw:: html
 
-   <a href="http://www.erlang.org/doc/man/erl_nif.html#enif_send" target="_blank">Erlang - erl_nif</a>
+   <a href="https://www.erlang.org/doc/man/erl_nif.html#enif_send" target="_blank">Erlang - erl_nif</a>
 
 .. |leo_storage configuration| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/configuration/configuration_2.html" >LeoFS documentation - leo_storage configuration</a>
+   <a href="https://leo-project.net/leofs/docs/configuration/configuration_2.html" >LeoFS documentation - leo_storage configuration</a>
 
 .. |leo_storage.conf| raw:: html
 

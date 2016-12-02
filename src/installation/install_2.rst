@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. index::
@@ -116,8 +116,8 @@ Reboot
 Format the partition
 """""""""""""""""""""""""""
 
-* `Reference(EN) <http://www.ibm.com/developerworks/linux/library/l-fs10/index.html>`_
-* `Reference(JP) <http://www.ibm.com/developerworks/jp/linux/library/l-fs10/index.html>`_
+* `Reference(EN) <https://www.ibm.com/developerworks/linux/library/l-fs10/index.html>`_
+* `Reference(JP) <https://www.ibm.com/developerworks/jp/linux/library/l-fs10/index.html>`_
 
 .. code-block:: bash
 

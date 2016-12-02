@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. _s3cmd-label:
@@ -9,7 +9,7 @@
 Connect to LeoFS using s3cmd
 ----------------------------
 
-Getting `s3cmd <http://sourceforge.net/projects/s3tools/files/>`_
+Getting `s3cmd <https://sourceforge.net/projects/s3tools/files/>`_
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Configuration

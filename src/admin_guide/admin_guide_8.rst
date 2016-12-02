@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. index::
@@ -354,4 +354,4 @@ Canned ACL
 |                  |                       | Granting this on a bucket is generally not recommended.                |
 +------------------+-----------------------+------------------------------------------------------------------------+
 
-* Reference:`Access Control List (ACL) Overview <http://docs.aws.amazon.com/AmazonS3/latest/dev/ACLOverview.html>`_
+* Reference:`Access Control List (ACL) Overview <https://docs.aws.amazon.com/AmazonS3/latest/dev/ACLOverview.html>`_

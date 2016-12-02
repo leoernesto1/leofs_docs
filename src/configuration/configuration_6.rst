@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2016 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. _leofs-with-nfs-label:
@@ -248,7 +248,7 @@ Limits
 ------
 
 Since LeoFS NFS implementation is still the beta version, there are some limitations. The details are described at `LeoFS
-Limits <http://leo-project.net/leofs/docs/faq/faq_2.html#nfs-support>`_
+Limits <https://leo-project.net/leofs/docs/faq/faq_2.html#nfs-support>`_
 
 
 
@@ -258,4 +258,4 @@ Limits <http://leo-project.net/leofs/docs/faq/faq_2.html#nfs-support>`_
 
 .. |admin_guide_1| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_1.html" target="_blank">Start LeoFS as usual</a>
+   <a href="https://leo-project.net/leofs/docs/admin_guide/admin_guide_1.html" target="_blank">Start LeoFS as usual</a>

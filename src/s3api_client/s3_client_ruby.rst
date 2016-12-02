@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. _aws-sdk-ruby-label:
@@ -9,7 +9,7 @@
 Getting Started with Ruby
 -------------------------
 
-aws-sdk's official documentation is `here. <http://aws.amazon.com/sdkforruby/>`_
+aws-sdk's official documentation is `here. <https://aws.amazon.com/sdkforruby/>`_
 
 Install AWS-SDK for Ruby
 ^^^^^^^^^^^^^^^^^^^^^^^^

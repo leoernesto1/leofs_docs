@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. _aws-sdk-java-label:
@@ -12,7 +12,7 @@ Getting Started with Java
 Getting AWS SDK for Java
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-URL: `SDK for Java <http://aws.amazon.com/sdkforjava/>`_
+URL: `SDK for Java <https://aws.amazon.com/sdkforjava/>`_
 
 .. note:: LeoFS domains are ruled by :ref:`this rule <s3-path-label>`. You need to set 'Proxy Host' and 'Proxy Port' with ClientConfiguration class.
 

@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. index::
@@ -21,7 +21,7 @@ This section is a step by step guide to setting up LeoFS for the first time. By 
 Install
 ^^^^^^^
 
-* Download a LeoFS package from `LeoFS website <http://leo-project.net/leofs/download.html>`_
+* Download a LeoFS package from `LeoFS website <https://leo-project.net/leofs/download.html>`_
 
 .. _install_leofs_label:
 
@@ -30,7 +30,7 @@ Install LeoFS on CentOS-6.x
 
 .. code-block:: bash
 
-    $ wget http://leo-project.net/leofs/packages/rpm/x86_64/leofs-{VERSION}.x86_64.rpm
+    $ wget https://leo-project.net/leofs/packages/rpm/x86_64/leofs-{VERSION}.x86_64.rpm
     $ sudo rpm -ivh leofs-{VERSION}.x86_64.rpm
     $ ls -l /usr/local/leofs/
     total 4
@@ -42,7 +42,7 @@ Install LeoFS on Ubuntu Server 12.04 LTS or Higher
 
 .. code-block:: bash
 
-    $ wget http://leo-project.net/leofs/packages/ubuntu/x86_64/leofs_{VERSION}_amd64.deb
+    $ wget https://leo-project.net/leofs/packages/ubuntu/x86_64/leofs_{VERSION}_amd64.deb
     $ sudo dpkg -i leofs_{VERSION}_amd64.deb
     $ ls -l /usr/local/leofs/
     total 4
@@ -166,7 +166,7 @@ Using LeoFS
 
 .. code-block:: bash
 
-    $ curl http://localhost:8080/your_bucket_name/path/to/file
+    $ curl https://localhost:8080/your_bucket_name/path/to/file
     > {CONTENTS}
 
 .. note:: From version 0.16.0, you need to set ACL settings of your bucket to ``public-read`` by using the command :ref:`update-acl<update-acl>` if you want to get the data stored in LeoFS via web browser.

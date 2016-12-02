@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 
@@ -10,7 +10,7 @@ Install Erlang
 LeoFS development currently targets Debian 6, Ubuntu-Server 14.04 LTS or Higher and CentOS 6.5/7, but should work on
 most Linux platforms with the following software installed:
 
-* `Erlang 17.5 <http://www.erlang.org/download_release/28>`_
+* `Erlang 17.5 <https://www.erlang.org/download_release/28>`_
 
 .. note:: We recommend this installation method. Please follow the relevant instructions for your environment.
 
@@ -51,7 +51,7 @@ Install "libatomic_ops" for Erlang 17.5  *(both CentOS and Ubuntu)*
 
 .. code-block:: bash
 
-   $ wget http://www.ivmaisoft.com/_bin/atomic_ops/libatomic_ops-7.4.2.tar.gz
+   $ wget https://www.ivmaisoft.com/_bin/atomic_ops/libatomic_ops-7.4.2.tar.gz
    $ tar xzvf libatomic_ops-7.4.2.tar.gz
    $ cd libatomic_ops-7.4.2
    $ ./configure --prefix=/usr/local
@@ -69,7 +69,7 @@ Download "Erlang 17.5"
 .. code-block:: bash
 
    $ cd $WORK_DIR
-   $ wget http://www.erlang.org/download/otp_src_17.5.tar.gz
+   $ wget https://www.erlang.org/download/otp_src_17.5.tar.gz
 
 \
 

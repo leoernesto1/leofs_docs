@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. index::
@@ -20,7 +20,7 @@ Installation
 ^^^^^^^^^^^^
 
 * `Basho's basho_bench's repository <https://github.com/basho/basho_bench/>`_
-* `Basho's basho_bench's documentation <http://docs.basho.com/riak/latest/cookbooks/Benchmarking>`_
+* `Basho's basho_bench's documentation <https://docs.basho.com/riak/latest/cookbooks/Benchmarking>`_
 * Use the following commands to set up basho_bench.
 
 .. code-block:: bash
@@ -67,7 +67,7 @@ Examples
 ^^^^^^^^
 
 * Some examples are included in the LeoFS repository at ${LEOFS_ROOT}/test/conf/leofs_*.config
-    * `Learn more about basho_bench's configuration <http://docs.basho.com/riak/latest/cookbooks/Benchmarking/#Configuration>`_
+    * `Learn more about basho_bench's configuration <https://docs.basho.com/riak/latest/cookbooks/Benchmarking/#Configuration>`_
 
 .. code-block:: erlang
 

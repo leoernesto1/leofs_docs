@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 Launch and Operation Flow
@@ -20,7 +20,7 @@ The LeoFS operation flow is as follows:
 .. image:: ../../_static/images/leofs-flow-diagram.jpg
    :width: 780px
 
-* `The diagram only <http://www.leofs.org/docs/_images/leofs-flow-diagram.jpg>`_
+* `The diagram only <http://leo-project.net/leofs/docs/_images/leofs-flow-diagram.jpg>`_
 
 
 .. index::

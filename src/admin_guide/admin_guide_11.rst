@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. index::
@@ -128,7 +128,7 @@ LeoFS development team tested the following CDN services with LeoFS. But other C
 
 .. |aws_cloudfront| raw:: html
 
-   <a href="http://aws.amazon.com/cloudfront/" target="_blank">AWS CloudFront</a>
+   <a href="https://aws.amazon.com/cloudfront/" target="_blank">AWS CloudFront</a>
 
 .. |sample_of_custom_header_conf| raw:: html
 
@@ -136,8 +136,8 @@ LeoFS development team tested the following CDN services with LeoFS. But other C
 
 .. |Nginx| raw:: html
 
-   <a href="http://nginx.org/" target="_blank">Nginx</a>
+   <a href="https://nginx.org/" target="_blank">Nginx</a>
 
 .. |measurement_units| raw:: html
 
-   <a href="http://nginx.org/en/docs/syntax.html" target="_blank">measurement units</a>
+   <a href="https://nginx.org/en/docs/syntax.html" target="_blank">measurement units</a>

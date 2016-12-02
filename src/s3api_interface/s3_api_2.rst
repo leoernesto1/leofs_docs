@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 Amazon S3 Interface
@@ -29,7 +29,7 @@ How to determine the name of Bucket
     * How S3 determines what to use depends on the **Domain name**.
 *   Patterns
 
-**1. http://s3.amazonaws.com/bucket/path_to_file**
+**1. https://s3.amazonaws.com/bucket/path_to_file**
 
   In this case, the name of the bucket is the first segment of the path.
 
@@ -45,7 +45,7 @@ How to determine the name of Bucket
 
   The argument of LeoFS' :ref:`whereis <whereis-command>` | :ref:`purge-cache <purge>` commands should be `bucket/path_to_file`.
 
-**2. http://www.example.com.s3.amazonaws.com/path_to_file**
+**2. https://www.example.com.s3.amazonaws.com/path_to_file**
 
   In this case, the name of the bucket is the part of the domain name before `.s3.amazonaws.com`.
 
@@ -61,7 +61,7 @@ How to determine the name of Bucket
 
   The argument of LeoFS' :ref:`whereis <whereis-command>` | :ref:`purge <purge>` commands should be `www.example.com/path_to_file`.
 
-**3. http://www.example.com/path_to_file**
+**3. https://www.example.com/path_to_file**
 
   In this case, the name of bucket is equal to the FQDN.
 
@@ -89,8 +89,8 @@ How to determine the name of Bucket
 
 .. |s3_docs_vhost| raw:: html
 
-   <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html" target="_blank">Virtual Hosting of Buckets</a>
+   <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html" target="_blank">Virtual Hosting of Buckets</a>
 
 .. |s3_docs_root| raw:: html
 
-   <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html" target="_blank">The official documentation</a>
+   <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html" target="_blank">The official documentation</a>

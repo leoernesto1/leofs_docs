@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. _leofs-with-nfs-label:
@@ -126,8 +126,8 @@ You need to set RPC-related configuration as follows to be able to communicate e
 
 .. |multidc-replication| raw:: html
 
-   <a href="http://leo-project.net/leofs/blog-entry-3.html" target="_blank">Multi Data Center Replication (1st phase)</a>
+   <a href="https://leo-project.net/leofs/blog-entry-3.html" target="_blank">Multi Data Center Replication (1st phase)</a>
 
 .. |join-cluster| raw:: html
 
-   <a href="http://leo-project.net/leofs/docs/admin_guide/admin_guide_9.html#join-cluster" target="_blank">join-cluster</a>
+   <a href="https://leo-project.net/leofs/docs/admin_guide/admin_guide_9.html#join-cluster" target="_blank">join-cluster</a>

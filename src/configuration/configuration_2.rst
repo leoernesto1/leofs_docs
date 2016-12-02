@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. index::
@@ -338,4 +338,4 @@ See Also
 
 .. |erlang-erl| raw:: html
 
-   <a href="http://erlang.org/doc/man/erl.html" target="_blank">Eralng - erl</a>
+   <a href="https://erlang.org/doc/man/erl.html" target="_blank">Eralng - erl</a>

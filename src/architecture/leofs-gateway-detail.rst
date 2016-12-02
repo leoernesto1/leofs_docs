@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. index::
@@ -29,15 +29,15 @@ Also, LeoFS Gateway provides built-in support for the object-cache mechanism in 
 
 .. |S3API| raw:: html
 
-   <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/APIRest.html" target="_blank">Amazon S3-API</a>
+   <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/APIRest.html" target="_blank">Amazon S3-API</a>
 
 .. |s3cmd| raw:: html
 
-   <a href="http://s3tools.org/s3cmd" target="_blank">s3cmd</a>
+   <a href="https://s3tools.org/s3cmd" target="_blank">s3cmd</a>
 
 .. |DragonDisk| raw:: html
 
-   <a href="http://www.dragondisk.com/" target="_blank">DragonDisk</a>
+   <a href="https://www.dragondisk.com/" target="_blank">DragonDisk</a>
 
 .. |Erlang| raw:: html
 

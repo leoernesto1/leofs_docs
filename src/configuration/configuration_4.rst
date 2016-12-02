@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. index::
@@ -379,9 +379,9 @@ Check the configuration
 
 .. |Nagios| raw:: html
 
-   <a href="http://www.nagios.org/" target="_blank">Nagios</a>
+   <a href="https://www.nagios.org/" target="_blank">Nagios</a>
 
 .. |Zabbix| raw:: html
 
-   <a href="http://www.zabbix.com/" target="_blank">Zabbix</a>
+   <a href="https://www.zabbix.com/" target="_blank">Zabbix</a>
 

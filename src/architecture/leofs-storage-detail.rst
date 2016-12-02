@@ -1,7 +1,7 @@
 .. =========================================================
 .. LeoFS documentation
 .. Copyright (c) 2012-2015 Rakuten, Inc.
-.. http://leo-project.net/
+.. https://leo-project.net/
 .. =========================================================
 
 .. index::
@@ -58,7 +58,7 @@ On the other hand, In case of READ of a large object, first, *LeoFS Gateway* ret
 
 .. |eventualy_consistency| raw:: html
 
-   <a href="http://en.wikipedia.org/wiki/Eventual_consistency" target="_blank">Eventual consistency</a>
+   <a href="https://en.wikipedia.org/wiki/Eventual_consistency" target="_blank">Eventual consistency</a>
 
 .. |bitcask| raw:: html
 
