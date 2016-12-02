@@ -20,7 +20,7 @@ The LeoFS operation flow is as follows:
 .. image:: ../../_static/images/leofs-flow-diagram.jpg
    :width: 780px
 
-* `The diagram only <http://leo-project.net/leofs/docs/_images/leofs-flow-diagram.jpg>`_
+* `The diagram only <https://leo-project.net/leofs/docs/_images/leofs-flow-diagram.jpg>`_
 
 
 .. index::

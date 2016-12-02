@@ -100,7 +100,7 @@ The Consistency Level
     ## --------------------------------------------------------------------
     ## MANAGER - Consistency Level
     ##     * Only set its configurations to **Manager-master**
-    ##     * See: http://leo-project.net/leofs/docs/configuration/configuration_1.html
+    ##     * See: https://leo-project.net/leofs/docs/configuration/configuration_1.html
     ## --------------------------------------------------------------------
     ## A number of replicas
     consistency.num_of_replicas = 3
@@ -165,7 +165,7 @@ Configuration of the Manager-Master node
     ## --------------------------------------------------------------------
     ## MANAGER - Consistency Level
     ##     * Only set its configurations to **Manager-master**
-    ##     * See: http://leo-project.net/leofs/docs/configuration/configuration_1.html
+    ##     * See: https://leo-project.net/leofs/docs/configuration/configuration_1.html
     ## --------------------------------------------------------------------
     ## A number of replicas
     consistency.num_of_replicas = 3
