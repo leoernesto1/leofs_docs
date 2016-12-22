@@ -22,7 +22,7 @@ With the version <= 1.3.0, LeoFS had a serious issue that may cause data-lost,
 so that use at least >= 1.3.1.
 Or in case you need to keep running LeoFS with older one for some reason,
 make sure that ``large_object.reading_chunked_obj_len`` <= ``large_object.chunked_obj_len`` in leo_gateway.conf.
-This setting prevent LeoFS from suffering issue#531.
+This setting prevent LeoFS from suffering |issue531|.
 
 
 See Also:
@@ -38,4 +38,4 @@ See Also:
 
 .. |issue531| raw:: html
 
-   <a href="https://github.com/leo-project/leofs/issues/531" target="_blank">The last part of a large object can be broken with reading_chunked_obj_len > chunked_obj_len in leo_gateway.conf</a>
+   <a href="https://github.com/leo-project/leofs/issues/531" target="_blank">Issue#531 (The last part of a large object can be broken with reading_chunked_obj_len > chunked_obj_len in leo_gateway.conf)</a>

@@ -71,13 +71,13 @@ LeoFS Gateway configuration
 | large_object.max_chunked_objs                       | 1000                                       | Total number of chunked objects                                                                                    |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | large_object.chunked_obj_len                        | 5242880                                    | Length of a chunked object (Byte),                                                                                 |
-|                                                     |                                            | This value must be >= ``large_object.reading_chunked_obj_len`` otherwise you may hit issue#531,                    |
+|                                                     |                                            | This value must be >= ``large_object.reading_chunked_obj_len`` otherwise you may hit |issue531|,                   |
 |                                                     |                                            | With version >= 1.3.1, LeoFS check whether this constraint is violated or not when starting leo_gateway            |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | large_object.threshold_of_chunk_len                 | 5767168                                    | Threshold of length of a chunked object (Byte)                                                                     |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | large_object.reading_chunked_obj_len                | 5242880                                    | Reading length of a chuncked object,                                                                               |
-|                                                     |                                            | This value must be <= ``large_object.chunked_obj_len`` otherwise you may hit issue#531,                            |
+|                                                     |                                            | This value must be <= ``large_object.chunked_obj_len`` otherwise you may hit |issue531|,                           |
 |                                                     |                                            | With version >= 1.3.1, LeoFS check whether this constraint is violated or not when starting leo_gateway            |
 +-----------------------------------------------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | **Cache configuration**                                                                                                                                                                                               |
@@ -282,4 +282,4 @@ See Also
 
 .. |issue531| raw:: html
 
-   <a href="https://github.com/leo-project/leofs/issues/531" target="_blank">The last part of a large object can be broken with reading_chunked_obj_len > chunked_obj_len in leo_gateway.conf</a>
+   <a href="https://github.com/leo-project/leofs/issues/531" target="_blank">issue#531 (The last part of a large object can be broken with reading_chunked_obj_len > chunked_obj_len in leo_gateway.conf)</a>
