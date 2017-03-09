@@ -126,7 +126,7 @@ Uploading to LeoFS using multipart
   ## This code supports "aws-sdk v1.9.5"
   require 'aws-sdk'
 
-  Endpoint = "leofs.org"
+  Endpoint = "leo-project.net"
   Port = 8080
 
   ## set your s3 key
